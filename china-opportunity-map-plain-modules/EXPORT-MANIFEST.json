@@ -1,0 +1,80 @@
+{
+  "source_commit": "8ff85236b1444e5126421e47a1e38275035041ec",
+  "files": [
+    {
+      "path": "EXPORT-VALIDATION.json",
+      "sha256": "c9d57edaf813a437b7bb08e798cfb284c3f640ed027fbc5249186e19962f8145",
+      "bytes": 614
+    },
+    {
+      "path": "EXPORT.md",
+      "sha256": "e8b3134416df3cca1d2885b269162bc8951d843687b2d37d116d3e603dfc894c",
+      "bytes": 797
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "a532286bb558d7d92f35c6df11f864736c6a98a7d391255fe7fa3a608b6cbeae",
+      "bytes": 1066
+    },
+    {
+      "path": "LICENSE-SCOPE.md",
+      "sha256": "9d6383c0d534ba2c384fcaba833013cc9f7000ec70a64cf1da4065dd47ea3580",
+      "bytes": 304
+    },
+    {
+      "path": "README.md",
+      "sha256": "c2e8ffa41f01aca6e5203581650fd163adaa5dd11132657afc6a1914a55e86a0",
+      "bytes": 874
+    },
+    {
+      "path": "package.json",
+      "sha256": "f6ffa85fb865f822b93d8f503982816862f69d37600d04fd17999f0fcb570132",
+      "bytes": 258
+    },
+    {
+      "path": "scripts/test-improv.mjs",
+      "sha256": "30e551c8e1613a55e92999c44deb5182b428eb8c95e7e61ec6988c8a15ae8c2b",
+      "bytes": 4986
+    },
+    {
+      "path": "scripts/test-model.mjs",
+      "sha256": "247b02557ffc949c479a06a5b36e21db4dffbbefdd920264204271fc8a7478fb",
+      "bytes": 822
+    },
+    {
+      "path": "scripts/test-nextmove.mjs",
+      "sha256": "3dc32d7a5118376b55ab28f583639e441de1eab29f545de2187eb9427cc56556",
+      "bytes": 2629
+    },
+    {
+      "path": "src/lib/atlas/cities.ts",
+      "sha256": "3e7e05377a36c6d0ccf6a5a7043bd6f03110fccfa664c32007e9c651e751161b",
+      "bytes": 329
+    },
+    {
+      "path": "src/lib/atlas/model.ts",
+      "sha256": "cd24c8922c3e25d88051551dd5fee343dfd77ecbdd767d653a19df4ee794c75d",
+      "bytes": 4310
+    },
+    {
+      "path": "src/lib/atlas/types.ts",
+      "sha256": "439770efdd0372d93b400df7be3b9db54113f3e29fbff796bfc40a611845cc70",
+      "bytes": 1315
+    },
+    {
+      "path": "src/lib/improv/daily.ts",
+      "sha256": "c0b50557fd4e45dc51868c1f90f408d48f44132225a7b7683ecaee122a4acd63",
+      "bytes": 19427
+    },
+    {
+      "path": "src/lib/improv/jazz.ts",
+      "sha256": "6377afccd853b0e1694b24eacfc7de5d17c626e134d69173e83285ac91a6d2e2",
+      "bytes": 5283
+    },
+    {
+      "path": "src/lib/nextmove/game.ts",
+      "sha256": "c3e26aa08527ef4f5f0ade73e8bedae0e4f380e318e21337ba606c28650eddcf",
+      "bytes": 13253
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "./",
+  "name": "兑现 · Exit Pilot",
+  "short_name": "兑现",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#101719",
+  "theme_color": "#101719",
+  "description": "现金目标、分批退出与成交跟踪",
+  "icons": [
+    {
+      "src": "placeholder.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

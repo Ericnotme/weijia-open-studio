@@ -1,0 +1,14 @@
+{
+  "source_commit": "8ff85236b1444e5126421e47a1e38275035041ec",
+  "status": "partial_module_export",
+  "test_command": "npm test",
+  "test_exit_code": 0,
+  "tests": "4 passing groups: exhaustive Next Move, daily cards, mocked audio lifecycle, synthetic model",
+  "syntax_files": 9,
+  "privacy_scan": "No production identifiers, contact emails, local workspace paths or private-key markers found in bounded scan. Not an exhaustive security certification.",
+  "limits": [
+    "No UI or full production application",
+    "No browser validation",
+    "Only synthetic fixtures; no real geography or market data"
+  ]
+}

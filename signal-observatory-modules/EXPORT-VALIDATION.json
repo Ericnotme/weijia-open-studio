@@ -1,0 +1,14 @@
+{
+  "source_commit": "af2d07c438b31511aa8fe2ba46184908b68bc80f",
+  "status": "partial_module_export",
+  "test_command": "npm test",
+  "test_exit_code": 0,
+  "tests": 33,
+  "syntax_files": 8,
+  "privacy_scan": "No production identifiers, contact emails, local workspace paths or private-key markers found in bounded scan. Not an exhaustive security certification.",
+  "limits": [
+    "No UI or full production application",
+    "No browser validation",
+    "Only synthetic fixtures; no real geography or market data"
+  ]
+}

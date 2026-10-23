@@ -1,0 +1,11 @@
+{
+  "name": "china-opportunity-map-plain-modules",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node scripts/test-nextmove.mjs && node scripts/test-improv.mjs && node scripts/test-model.mjs"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "source_commit": "5f6f0a06656de5291fad809da6d1e58ce9288d54",
+  "javascript_syntax": {
+    "checked": 20,
+    "failed": []
+  },
+  "local_html_assets": {
+    "missing": []
+  },
+  "scope_scan_findings": [],
+  "browser_visual_QA": "not_run",
+  "full_dependency_build": "not_run_no_dependency_install",
+  "tests": {
+    "command": "node --test tests/exit.test.mjs tests/lab.test.mjs tests/strategy.test.mjs",
+    "passed": 22,
+    "failed": 0,
+    "wallet_tests": "not_run_dependency_install_required"
+  }
+}

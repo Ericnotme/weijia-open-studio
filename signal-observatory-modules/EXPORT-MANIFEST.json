@@ -1,0 +1,75 @@
+{
+  "source_commit": "af2d07c438b31511aa8fe2ba46184908b68bc80f",
+  "files": [
+    {
+      "path": "EXPORT-VALIDATION.json",
+      "sha256": "998280b235943f5df5df1c3b3ec7c946832ed37a17c5709ba6b10a048a3d4fc3",
+      "bytes": 522
+    },
+    {
+      "path": "EXPORT.md",
+      "sha256": "c14d6a76af3d127e2fde5d56c97480b0736f740b115cc34cee435015186628ab",
+      "bytes": 725
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "2b41a062f80c69363aa5f9d93b2be825a19907597c13f5e96fabb28211df572f",
+      "bytes": 1068
+    },
+    {
+      "path": "LICENSE-SCOPE.md",
+      "sha256": "9d6383c0d534ba2c384fcaba833013cc9f7000ec70a64cf1da4065dd47ea3580",
+      "bytes": 304
+    },
+    {
+      "path": "README.md",
+      "sha256": "87e7bde893091cb9525a1e0c945c3eecfe32c1e5dc149cf8274601917a4e7922",
+      "bytes": 802
+    },
+    {
+      "path": "lib/cyclewatch-config.ts",
+      "sha256": "b2d8dd5ab93d877a45f6a1d3d49978428845f53670d5b409c8daedc8396106d5",
+      "bytes": 166
+    },
+    {
+      "path": "lib/cyclewatch-reference.ts",
+      "sha256": "dbb0ca19967688db0c1a28cdf5040fa620ef891e88a1c48370b73097777f8587",
+      "bytes": 195
+    },
+    {
+      "path": "lib/cyclewatch.ts",
+      "sha256": "bc2b77373c1198adff21f566da402a579d25c18899f0468a001b99c4dfb93ee6",
+      "bytes": 14855
+    },
+    {
+      "path": "lib/factor-lab.ts",
+      "sha256": "5838697ebbfa4f5ead27c5d707058802952c118f543b104c332647ad8a771ecb",
+      "bytes": 9991
+    },
+    {
+      "path": "lib/research-engine.ts",
+      "sha256": "5b8770fc4f518c611a881b354d96124a0b42dfa37fb3f534c2a36deaef7799ef",
+      "bytes": 20397
+    },
+    {
+      "path": "package.json",
+      "sha256": "35baa578b24955342157c3a22aff8f2bff2fc63e06e63e26230a7a46ccb4802a",
+      "bytes": 184
+    },
+    {
+      "path": "tests/cyclewatch.test.mjs",
+      "sha256": "e7e10f4290a7048ca11c331c63fdc145a8f2a447cdf68f16015ba511ba55c738",
+      "bytes": 5313
+    },
+    {
+      "path": "tests/factor-lab.test.mjs",
+      "sha256": "adb0010d64b492473f8bc3b92bf43645520b5228a8e3e15f399f30da3b9bb284",
+      "bytes": 5436
+    },
+    {
+      "path": "tests/research-engine.test.mjs",
+      "sha256": "4b231f7eb2954178b6d9f783196f3775be04818bdd76329684bd47c3f15ee8ac",
+      "bytes": 9656
+    }
+  ]
+}
