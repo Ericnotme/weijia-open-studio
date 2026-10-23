@@ -1,0 +1,30 @@
+{
+  "source_commit": "31a2e809885338f68bea950154b67b570cb6a3d1",
+  "tests": [
+    {
+      "label": "model tests",
+      "command": "node tests/model.test.mjs",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.1,
+      "summary_lines": [
+        "PASS: serving 0/0.5/1/2 once only, invalid inputs, movement category boundaries, measure types, unknown states, 39 public foods."
+      ]
+    }
+  ],
+  "javascript_syntax": {
+    "checked": 4,
+    "failed": []
+  },
+  "local_html_reference_check": {
+    "missing": []
+  },
+  "export_scope_scan": {
+    "findings": [],
+    "limits": "Pattern/file inventory review is not exhaustive secret detection or production security certification."
+  },
+  "full_dependency_build": "not_applicable_static_source",
+  "browser_validation": "not_run_no_browser_dependency_install",
+  "live_model_or_production_requests": "not_run",
+  "readiness": "prepared_source_candidate"
+}

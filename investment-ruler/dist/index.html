@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>几分 · 实盘收益与风险自检</title>
+<meta name="description" content="几分 · 实盘收益与风险自检。像复盘棋局一样理解投资能力。通过12个投资情境评估决策质量，用月度收益分析风险调整表现，公开方法与局限。">
+<meta name="theme-color" content="#111b2b">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23111b2b'/%3E%3Cpath d='M8 24V8h16M8 13h7M8 18h11M8 23h16' fill='none' stroke='%23d5f56b' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar">
+<a class="brand" href="#assessment" aria-label="几分首页"><span class="brand-symbol" aria-hidden="true">分</span><span>几分<small>实盘收益与风险自检</small></span></a>
+<div class="sidebar-caption">评估工作台</div>
+<nav aria-label="主要导航">
+<button class="nav-button active" data-page="assessment"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V5h16v14H4zm4-4 3-4 3 2 3-5"/></svg>决策测评<span class="nav-index">01</span></button>
+<button class="nav-button" data-page="performance"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16M6 16V9m6 7V4m6 12v-6"/></svg>实盘分析<span class="nav-index">02</span></button>
+<button class="nav-button" data-page="method"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5V4zm4 4h6m-6 4h6m-6 4h3"/></svg>评分方法<span class="nav-index">03</span></button>
+</nav>
+<div class="sidebar-bottom"><div class="ruler-motif" aria-hidden="true"></div><p>先看决策，<br>再看结果。</p><span>研究原型 · v1.0</span></div>
+</aside>
+<main>
+<header class="topbar"><span class="breadcrumb">几分 <span>/</span> <strong id="page-label">决策测评</strong></span><span class="privacy-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3M5 10h14v11H5z"/></svg>数据仅在当前页面计算</span></header>
+<section id="assessment" class="page active" aria-labelledby="assessment-title">
+<div class="page-heading"><div><div class="eyebrow">DECISION QUALITY</div><h1 id="assessment-title">你的投资决策，经得起复盘吗？</h1><p>12 个情境，拆解风险、概率、证据与纪律。</p></div><span class="outline-badge">约 5 分钟</span></div>
+<div class="workspace">
+<div class="assessment-column">
+<div class="progress-heading"><span id="question-count">情境 01 / 12</span><span id="answered-count">已完成 0 题</span></div><div class="progress-track" role="progressbar" aria-label="测评进度" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0" id="quiz-progress"><span id="progress-fill"></span></div>
+<div class="question-card" id="question-card"></div>
+<div class="assessment-note"><span class="note-mark">i</span><p>评估的是<strong>这些情境下的决策质量</strong>。实盘盈利能力还需要收益记录来验证。</p></div>
+</div>
+<aside class="profile-panel" aria-labelledby="profile-title">
+<div class="profile-header"><h2 id="profile-title">能力画像</h2><span id="profile-status" class="small-badge">待测评</span></div>
+<div class="score-dial" id="score-dial"><div><span class="score-number" id="score-number">—</span><span class="score-denom">/ 100</span><p id="score-caption">决策情境分</p></div></div>
+<p class="score-description" id="score-description">完成测评后，获得你的分数与复盘。</p>
+<div id="dimension-bars" class="dimension-bars"></div>
+<div class="evidence-status"><span class="evidence-square" aria-hidden="true"></span><div><strong>实盘证据：待提供</strong><p>测评分与实盘表现分别报告</p></div></div>
+<button class="text-button" data-go="method">这把尺子如何计算？</button>
+</aside>
+</div>
+<div class="bottom-strip"><span><b>01</b> 选择你会采取的行动</span><span><b>02</b> 看每一步的得失</span><span><b>03</b> 用实盘记录继续验证</span></div>
+</section>
+<section id="performance" class="page" aria-labelledby="performance-title" hidden>
+<div class="page-heading"><div><div class="eyebrow">PERFORMANCE EVIDENCE</div><h1 id="performance-title">收益，是能力还是顺风？</h1><p>把你的表现放在同一时期、同一币种的基准旁边。</p></div><span class="outline-badge">月度数据</span></div>
+<div class="performance-layout">
+<section class="input-card"><div class="section-top"><h2>输入月度收益</h2><button class="subtle-button" id="load-example">填入演示数据</button></div>
+<p class="input-help">每行：月份、组合收益%、基准收益%。月份需连续；含分红并扣除费用，剔除出入金影响。</p>
+<label for="return-data" class="field-label">月度收益记录</label>
+<textarea id="return-data" rows="12" spellcheck="false" placeholder="月份,组合收益%,基准收益%&#10;2024-01,2.1,1.5&#10;2024-02,-1.2,-0.8&#10;2024-03,3.4,2.6"></textarea>
+<div class="field-grid"><div><label for="benchmark-name" class="field-label">比较基准</label><input id="benchmark-name" type="text" value="自选基准" maxlength="40" placeholder="如：沪深300全收益"></div><div><label for="risk-free" class="field-label">年无风险收益率 %</label><input id="risk-free" type="number" value="2" min="-10" max="30" step="0.1"></div></div>
+<p class="field-hint">基准应事先选定，并匹配你的资产类型与风险暴露。</p>
+<p id="data-error" class="error-message" role="alert" hidden></p>
+<div class="input-actions"><button id="calculate-performance" class="primary-button">计算实盘表现</button><button id="clear-performance" class="subtle-button">清空</button></div>
+<p class="field-hint">至少 3 个月；12 个月起显示年化指标。演示数据为虚构，不代表任何真实账户。</p>
+</section>
+<div id="performance-results" class="performance-results" aria-live="polite"><div class="empty-results"><div class="empty-chart" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div><h2>让记录说话</h2><p>输入收益，查看净值、回撤、<br>夏普比率与基准对照。</p><button class="text-button" id="empty-example">先看看演示</button></div><div class="plain-note"><strong>盈利 ≠ 已证明的能力</strong><p>单一牛市、杠杆和偶然好运都可能抬高收益。这里计算表现，不把历史盈利直接转换成个人等级。</p></div></div>
+</div>
+</section>
+<section id="method" class="page" aria-labelledby="method-title" hidden>
+<div class="page-heading"><div><div class="eyebrow">A TRANSPARENT RULER</div><h1 id="method-title">一把公开刻度的尺子。</h1><p>能测什么，不能测什么，都写清楚。</p></div><span class="outline-badge">方法 v1.0</span></div>
+<div class="method-intro"><span class="method-symbol">尺</span><div><h2>借鉴棋局复盘，把过程和结果分开。</h2><p>棋评引擎能在明确规则下比较着法。投资的收益分布、目标和约束常常未知，所以这里用透明的情境规则评估理解与决策，再单独分析真实表现。当前没有调用 AI，也没有人群常模。</p></div></div>
+<div class="method-grid"><section class="method-card"><span class="card-index">01 / 决策</span><h2>决策情境分 · 0–100</h2><p>4 项能力各 3 题，等权重。每题 0–3 分：3 分满足题设目标；1–2 分部分合理但有遗漏；0 分违反关键约束或计算错误。</p><div class="formula">决策分 = 总得分 ÷ 36 × 100</div><p>数值题按计算结果评分；行为题按公开规则评分，存在规范判断。完成后可查每个选项的分值与理由。</p><p class="muted">这是本站的学习刻度，未经心理测量验证；不等于 Elo（棋力等级分），不代表人群百分位，也不预测你的未来收益。重测和看答案会提高分数，不能当作独立进步证据。</p></section>
+<section class="method-card"><span class="card-index">02 / 表现</span><h2>实盘表现 · 分项报告</h2><p>净值从 1 开始，逐月复利；用月末净值计算最大回撤。年化收益为复利年化；波动率用样本标准差。</p><div class="formula">夏普 = 月均超额收益 ÷ 月波动 × √12</div><p>无风险月收益 = (1 + 年收益)^(1/12) − 1。信息比率使用组合减基准的主动收益。两者采用常规 √12 年化，依赖时间相关性等假设。</p><p class="muted">月度数据可能漏掉月内极端回撤。主动收益不是多因子 alpha（剔除风险暴露后的超额收益）；不同风险的组合不能仅按收益差判优劣。</p></section></div>
+<section class="method-card calibration-card"><div><span class="card-index">03 / 信心</span><h2>你有多确定，与你有多正确。</h2><p>每题记录对“当前选项是最佳答案”的信心。答完后报告平均信心与最佳答案命中率之差：正值提示本次答题可能过度自信；负值提示可能低估自己。</p></div><div class="calibration-callout">信心偏差<br><strong>平均信心 − 命中率</strong><small>只反映本次 12 道题，不能代替真实投资预测校准。</small></div></section>
+<section class="age-section"><div class="section-top"><div><span class="card-index">04 / 年龄</span><h2>经验与认知，会在不同任务上交汇。</h2></div><span class="small-badge">年龄不参与评分</span></div><div class="age-cards"><article><span class="age-number">35–45<span>岁</span></span><h3>职业国际象棋</h3><p>2020 年棋局研究显示约 35–45 岁的高表现区间；不同模型峰值有差异，45 岁后的下降并非总显著。</p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7959507/" target="_blank" rel="noopener noreferrer">Strittmatter 等 · PNAS 2020</a></article><article><span class="age-number">≈53<span>岁</span></span><h3>部分金融决策</h3><p>2007 年研究发现，借贷利率和费用决策的错误成本约在 53 岁最低。它研究的不是股票投资收益。</p><a href="https://www.nber.org/papers/w13191" target="_blank" rel="noopener noreferrer">Agarwal 等 · NBER 2007</a></article><article><span class="age-number age-words">无统一峰值</span><h3>个人投资能力</h3><p>年龄、经验和执行能力并不等价。这里不把 41 岁设为通用峰值，也不会因年龄给你加分或扣分。</p><a href="https://scholarship.miami.edu/esploro/outputs/journalArticle/Do-Older-Investors-Make-Better-Investment/991031577258802976" target="_blank" rel="noopener noreferrer">Korniotis & Kumar · 2011</a></article></div></section>
+<details class="method-card"><summary>展开计算细节、样本量与研究来源</summary><div class="detail-content"><h3>实盘指标</h3><p>累计收益 = ∏(1+r) − 1；年化收益 = [∏(1+r)]^(12/n) − 1；最大回撤 = max(1 − 净值 / 此前最高净值)，包含初始净值 1。年化波动 = s(r)×√12。年化收益差 = 组合年化收益 − 基准年化收益，单位为百分点。</p><p>平均主动收益 = 12×mean(r−b)，是算术年化，区别于复利年化收益差。≥36 个月时显示其近似 95% 区间，使用 Newey–West（允许短期相关性的标准误），滞后阶数为 min(⌊4(n/100)^(2/9)⌋,⌊n/4⌋)，正态临界值 1.96。</p><p>区间只描述该样本下主动收益均值的不确定性，不是“有能力的概率”。它不控制风险因子、多重试验、挑选起止日期、幸存者偏差与未来市场变化。跨零意味着证据不足以区分正负；未跨零也不能直接证明可持续能力。</p><p>3–11 个月只报告累计收益与月末回撤；12–35 个月可看年化指标，证据仍有限；36 个月以上只是记录更长，不是通过认证。零波动时比率不定义，显示“无法计算”。</p><h3>原始来源</h3><ul class="source-list"><li><a href="https://web.stanford.edu/~wfsharpe/art/sr/sr.htm" target="_blank" rel="noopener noreferrer">Sharpe (1994), The Sharpe Ratio</a>：收益与风险的比率、时间相关性限制。</li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7959507/" target="_blank" rel="noopener noreferrer">Strittmatter, Sunde & Zegners (2020), PNAS</a>：职业棋手的年龄表现模式。</li><li><a href="https://www.nber.org/papers/w13191" target="_blank" rel="noopener noreferrer">Agarwal 等 (2007), The Age of Reason</a>：金融费用与利率决策的生命周期模式。</li><li><a href="https://scholarship.miami.edu/esploro/outputs/journalArticle/Do-Older-Investors-Make-Better-Investment/991031577258802976" target="_blank" rel="noopener noreferrer">Korniotis & Kumar (2011), Do Older Investors Make Better Investment Decisions?</a>：经验与认知老化对投资执行的不同影响。</li></ul><p class="muted">来源用于支持相关概念与研究背景，不意味着这些论文验证了本站题库或评分。研究信息核对日期：2026-09-30。</p></div></details>
+</section>
+<footer><span>几分 · Investment Ruler <span class="footer-divider">/</span> 把判断变成可复盘的记录</span><span>学习与评估原型 · 不提供买卖建议</span></footer>
+</main>
+</div>
+<script src="app.js"></script>
+<aside data-portfolio-nav style="font:12px/1.7 system-ui;text-align:center;padding:12px;background:#f6f8f8;color:#49636b"><a href="https://signal-observatory.weijiaxian.chatgpt.site/lab/index.html?utm_source=lab" style="color:inherit">鲜唯佳的作品实验室 · 探索更多工具</a><span style="display:inline-flex;flex-wrap:wrap;justify-content:center;gap:0 1rem;margin:0 .75rem"><a data-portfolio-support href="https://signal-observatory.weijiaxian.chatgpt.site/lab/support/" target="_blank" rel="noopener noreferrer" style="color:inherit;display:inline-flex;align-items:center;min-height:44px;font-size:.875rem;line-height:1.7;text-underline-offset:.2em">自愿支持创作</a><a data-portfolio-music href="https://signal-observatory.weijiaxian.chatgpt.site/lab/?listen=investment-ruler#music" target="_blank" rel="noopener noreferrer" style="color:inherit;display:inline-flex;align-items:center;min-height:44px;font-size:.875rem;line-height:1.7;text-underline-offset:.2em">配乐</a></span></aside></body>
+</html>

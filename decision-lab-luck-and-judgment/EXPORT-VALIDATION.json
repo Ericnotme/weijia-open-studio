@@ -1,0 +1,7 @@
+{
+  "node_tests": "10 passed",
+  "browser_tests": "not run; optional Playwright dependency not installed",
+  "node_syntax_check": "all exported JS/MJS/CJS files passed",
+  "static_asset_links": "local HTML asset references resolve",
+  "browser_visual_QA": "not run"
+}

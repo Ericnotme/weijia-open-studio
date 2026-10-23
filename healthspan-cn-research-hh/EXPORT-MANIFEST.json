@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "site": "healthspan-cn-research-hh",
+  "source_commit": "31a2e809885338f68bea950154b67b570cb6a3d1",
+  "license": "MIT for original code only; existing vendor/component terms preserved",
+  "readiness": "prepared_source_candidate",
+  "omitted_paths": [
+    ".openai/hosting.json",
+    "dist/assets/icon-180.png"
+  ],
+  "export_changes": [
+    "Original-code-only MIT and scope notice added.",
+    "Deployment identity, runtime/cache artifacts and growth hooks excluded.",
+    "Unverified raster touch icon omitted; existing SVG favicon retained."
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 207,
+      "sha256": "3224188f4a79c624b6b2f1bc159da5afb41d091637b9d5a03099ae76e7bec73e"
+    },
+    {
+      "path": "EXPORT-VALIDATION.json",
+      "bytes": 923,
+      "sha256": "82f7692fcf6e0ce022b41e060544c0ca930b08e396cfc4ec93b1d80a0ce7e0fd"
+    },
+    {
+      "path": "EXPORT.md",
+      "bytes": 1774,
+      "sha256": "bac92dd4751a98b74d6d2b73ab8a7742bbba41e98b4c7149e1f7ded8f67c4d77"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1147,
+      "sha256": "b87b597d867991704cb4365ef8d1a1959ecd562600400d8901b9379b662e07d7"
+    },
+    {
+      "path": "LICENSE-SCOPE.md",
+      "bytes": 913,
+      "sha256": "7038e5a4ab65a554272a032bc7f5fb296777bae283a9c07623804a160bae5c54"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1846,
+      "sha256": "a7d37c11ddd273c9bf97e7e4e9ceb8ade7f1eb5c704ffde9ed66b599da9e0384"
+    },
+    {
+      "path": "dist/404.html",
+      "bytes": 456,
+      "sha256": "8298ba522ad2677a606268c4e9eca30b7b5bfcf7f91bab21b1b9d55512921ea2"
+    },
+    {
+      "path": "dist/_headers",
+      "bytes": 311,
+      "sha256": "bcf1f4f38652465d017e965b0806c374863754b492b9391473f75981a52a5915"
+    },
+    {
+      "path": "dist/assets/app.mjs",
+      "bytes": 11640,
+      "sha256": "48faa697a3b4d34265293b013cf4d85cb593dbdbd24180ea3c7c30f35fc1eda9"
+    },
+    {
+      "path": "dist/assets/evidence.mjs",
+      "bytes": 9460,
+      "sha256": "cebafe2db4c66a078cf47a01ba20fb66085b5576cd59117e0b7f87604d6aa93e"
+    },
+    {
+      "path": "dist/assets/foods.json",
+      "bytes": 18038,
+      "sha256": "5ae1156c7e3b7fb1c2ba7b677b7469b9d8694784b079074f2a854da9646c6fea"
+    },
+    {
+      "path": "dist/assets/icon.svg",
+      "bytes": 831,
+      "sha256": "e01fc60ede982c7e7163274630dde5cc6b37f4e7748424152a63d50cd5c88f3a"
+    },
+    {
+      "path": "dist/assets/model.mjs",
+      "bytes": 1437,
+      "sha256": "e6238039eb375442f7fc5932e099a6305b1ecb32679dd9580f76c829f467e1c3"
+    },
+    {
+      "path": "dist/assets/styles.css",
+      "bytes": 13839,
+      "sha256": "969acb81ab1eb48612b28d8653db81819d4d769ad4bcb11b6c78d52b008d35d9"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 9345,
+      "sha256": "46031f592396d9984a1a6781f5c381a22455f4f000be3fc8b0cf4e72ea7af192"
+    },
+    {
+      "path": "dist/manifest.webmanifest",
+      "bytes": 311,
+      "sha256": "97a0ac84dfc76743cd52eba8a2fda07a7f6b07994715bac4abea4eb3ba94c728"
+    },
+    {
+      "path": "tests/model.test.mjs",
+      "bytes": 1931,
+      "sha256": "8c9da6d44589fcd80c77584b2e5cd80308363c46c6ee4b699ea689d2273b98cc"
+    }
+  ]
+}

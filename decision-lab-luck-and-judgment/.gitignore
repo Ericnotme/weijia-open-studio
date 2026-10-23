@@ -1,0 +1,4 @@
+node_modules/
+evidence/
+*.tar.gz
+.DS_Store

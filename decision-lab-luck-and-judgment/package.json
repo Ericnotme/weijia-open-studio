@@ -1,0 +1,4 @@
+{
+  "name": "decision-lab", "version": "1.0.0", "private": true, "type": "module",
+  "scripts": {"start": "node server.mjs", "test": "node --test tests/engine.test.mjs", "test:browser": "node tests/browser.mjs"}
+}
