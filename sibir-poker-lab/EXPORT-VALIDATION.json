@@ -1,0 +1,7 @@
+{
+  "node_tests": "npm test passed: engine, trainer, learning and strength suites",
+  "build": "python3 assemble.py passed",
+  "node_syntax_check": "all exported JS/MJS/CJS files passed",
+  "static_asset_links": "local HTML asset references resolve",
+  "browser_visual_QA": "not run"
+}

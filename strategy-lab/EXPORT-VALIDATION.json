@@ -1,0 +1,46 @@
+{
+  "source_commit": "d168a13d391e77b25ad803adc8eacb164008f586",
+  "tests": [
+    {
+      "label": "research tests",
+      "command": "cd research && node --test tests/*.test.mjs",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.5,
+      "summary_lines": []
+    },
+    {
+      "label": "research source scan",
+      "command": "cd research && node scripts/scan.mjs",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.07,
+      "summary_lines": [
+        "  \"passed\": true,"
+      ]
+    },
+    {
+      "label": "reproducible build",
+      "command": "cd research && node scripts/build.mjs",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.06,
+      "summary_lines": []
+    }
+  ],
+  "javascript_syntax": {
+    "checked": 15,
+    "failed": []
+  },
+  "local_html_reference_check": {
+    "missing": []
+  },
+  "export_scope_scan": {
+    "findings": [],
+    "limits": "Pattern/file inventory review is not exhaustive secret detection or production security certification."
+  },
+  "full_dependency_build": "passed_research_build",
+  "browser_validation": "not_run_no_browser_dependency_install",
+  "live_model_or_production_requests": "not_run",
+  "readiness": "prepared_source_candidate"
+}

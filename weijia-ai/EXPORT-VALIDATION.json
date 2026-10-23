@@ -1,0 +1,28 @@
+{
+  "source_commit": "4ba2971f0b99a434c2060bcb1bdbe49edf1e8670",
+  "tests": [
+    {
+      "label": "protocol and provider mock tests",
+      "command": "node --test tests/*.test.mjs",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.24,
+      "summary_lines": []
+    }
+  ],
+  "javascript_syntax": {
+    "checked": 22,
+    "failed": []
+  },
+  "local_html_reference_check": {
+    "missing": []
+  },
+  "export_scope_scan": {
+    "findings": [],
+    "limits": "Pattern/file inventory review is not exhaustive secret detection or production security certification."
+  },
+  "full_dependency_build": "not_run_no_dependency_install",
+  "browser_validation": "not_run_no_browser_dependency_install",
+  "live_model_or_production_requests": "not_run",
+  "readiness": "prepared_source_candidate"
+}

@@ -1,0 +1,227 @@
+{
+  "schema_version": 1,
+  "site": "strategy-lab",
+  "source_commit": "d168a13d391e77b25ad803adc8eacb164008f586",
+  "license": "MIT for original code only; existing vendor/component terms preserved",
+  "readiness": "prepared_source_candidate",
+  "omitted_paths": [
+    ".openai/hosting.json"
+  ],
+  "export_changes": [
+    "Original-code-only MIT and scope notice added.",
+    "Deployment identity, runtime/cache artifacts and growth hooks excluded.",
+    "Expanded existing fanshi-research-source.zip into research/ with its original MIT license. Its recovered generated HTML initially matched current Site dist/index.html. Nested research self-download link omitted; main dist archive downloads preserved. Both downloadable source ZIP names now contain the same regenerated, clean latest source and existing MIT notice; no legacy archive snapshot is copied."
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 207,
+      "sha256": "3224188f4a79c624b6b2f1bc159da5afb41d091637b9d5a03099ae76e7bec73e"
+    },
+    {
+      "path": "EXPORT-VALIDATION.json",
+      "bytes": 1240,
+      "sha256": "e96c282d293c224903bf093497927d39e4edea69c7592c1c5e60f7ec67fed10f"
+    },
+    {
+      "path": "EXPORT.md",
+      "bytes": 2355,
+      "sha256": "3b0e009c918239268cc53ef404214bf6af16b93e85fa953d5b9292d372b7517d"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1147,
+      "sha256": "b87b597d867991704cb4365ef8d1a1959ecd562600400d8901b9379b662e07d7"
+    },
+    {
+      "path": "LICENSE-SCOPE.md",
+      "bytes": 913,
+      "sha256": "7038e5a4ab65a554272a032bc7f5fb296777bae283a9c07623804a160bae5c54"
+    },
+    {
+      "path": "README.md",
+      "bytes": 451,
+      "sha256": "aa31279d567b197ba74a52c606b6299f0ecfd7cc3bd52a89e8d1cc91de73fb9a"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 382,
+      "sha256": "599df70878470b91f7117dfa4941b157389ad9bb3a562df0101a0dc9c98a76f6"
+    },
+    {
+      "path": "dist/fanshi-research-source.zip",
+      "bytes": 71946,
+      "sha256": "fa712d8be280fd4c3bc07bbb4690fd91d933ee2dfac277082033e0ad53bed5c1"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 40869,
+      "sha256": "db74d33ff773d9c63a22469b6ab432e51aa4315271b76d5e5ef9d8922be8b27d"
+    },
+    {
+      "path": "dist/strategy-lab-source.zip",
+      "bytes": 71946,
+      "sha256": "fa712d8be280fd4c3bc07bbb4690fd91d933ee2dfac277082033e0ad53bed5c1"
+    },
+    {
+      "path": "research/.github/workflows/test.yml",
+      "bytes": 367,
+      "sha256": "1d35081b09fc5744abc15468d2671881657487162e2fa9107d83be9b428320f8"
+    },
+    {
+      "path": "research/.gitignore",
+      "bytes": 100,
+      "sha256": "b5bf87ff5f183411100682f79e8666107462a0e3cccb876820ccaae0785642aa"
+    },
+    {
+      "path": "research/LICENSE",
+      "bytes": 1076,
+      "sha256": "0ca262037c42a03c5d4a746f6448a49a0c384d75b8134011359c96b54ca44b1c"
+    },
+    {
+      "path": "research/PUBLIC_FILES.json",
+      "bytes": 688,
+      "sha256": "35e702adc0e2f8557a8af08a76f38264b9fd07ff218ae9d2c74be4e00f8d9417"
+    },
+    {
+      "path": "research/README.md",
+      "bytes": 7180,
+      "sha256": "8ed519aee9ec0f268e23520174806fbe74ac42c5a486ecfb1c1c6f9e66d94982"
+    },
+    {
+      "path": "research/SECURITY.md",
+      "bytes": 2817,
+      "sha256": "c33d9982df45a432c54841013af5f8d0a5ab8925e8e254c2d5b270116730fb26"
+    },
+    {
+      "path": "research/branding.json",
+      "bytes": 146,
+      "sha256": "b7ad542cb98816255362860056a86e15f1094c12e167de31a573ad151fa6fc1e"
+    },
+    {
+      "path": "research/dist/index.html",
+      "bytes": 40790,
+      "sha256": "8f0e128364bee88486afc355b62b3de1458e4b520445363c1eb3ed494a6d99f6"
+    },
+    {
+      "path": "research/docs/methodology.md",
+      "bytes": 3471,
+      "sha256": "c448fb1764ee707980370f94512c4f5012e6ac90c702b6c5bf194bf69ab1a190"
+    },
+    {
+      "path": "research/docs/openai-provider.md",
+      "bytes": 5837,
+      "sha256": "224bd86bd9566564ee98151dbd17b709a4ada07a5941f8455779fe4be51f2193"
+    },
+    {
+      "path": "research/docs/validation.md",
+      "bytes": 2736,
+      "sha256": "f22c4bdb7cedf51f4d2b1a476cb06b2ca0fb8ebfd0a1303ba21bed3e9be6a138"
+    },
+    {
+      "path": "research/examples/openai.json",
+      "bytes": 350,
+      "sha256": "c5f00e8711898fa59cae224f9deaa81375efe8ebf9d8222b0b7d40f527f5945a"
+    },
+    {
+      "path": "research/examples/provider.json",
+      "bytes": 140,
+      "sha256": "8e5fb2fdd79d02d281358eaebb20a41f8060d71fb48059c9bf35fb5483af1fa6"
+    },
+    {
+      "path": "research/package.json",
+      "bytes": 444,
+      "sha256": "49b370ef1f50ee257bf74c22e9e13b613323a3ede72e8c91a6c30bbb2d86e788"
+    },
+    {
+      "path": "research/scripts/build.mjs",
+      "bytes": 1512,
+      "sha256": "c66c94f3555694262054e8a2e990498f641910412acfc5f1d42273f0419c4774"
+    },
+    {
+      "path": "research/scripts/package.py",
+      "bytes": 944,
+      "sha256": "6d33d6e7d5a5fe9943dee2d02ca416736f804ed0239d74c0ba09a3bb05da67f6"
+    },
+    {
+      "path": "research/scripts/scan.mjs",
+      "bytes": 1314,
+      "sha256": "da60080675bacea7de3c1701b1babe6e72108233021192a5403fb683fe659731"
+    },
+    {
+      "path": "research/src/cli.mjs",
+      "bytes": 1620,
+      "sha256": "2bc34e113cca497810d2058455d4e25b35701b7f28ff369b34a3c5c75d97e0ca"
+    },
+    {
+      "path": "research/src/core.mjs",
+      "bytes": 12492,
+      "sha256": "f5cde6f40719330a2f68f1e63811ea40ea4f58bc55291aa15038b458d141a631"
+    },
+    {
+      "path": "research/src/log.mjs",
+      "bytes": 1247,
+      "sha256": "51ba5c1b0cc52cc79e9b3a79af1a4975db465332b0982d32e376617af4f42832"
+    },
+    {
+      "path": "research/src/mcp.mjs",
+      "bytes": 4172,
+      "sha256": "bd15e32c70653d87dedc21b56586b9a9f6634bd8fad4aeb852070c7f0a9f11fc"
+    },
+    {
+      "path": "research/src/openai-cli.mjs",
+      "bytes": 2335,
+      "sha256": "e0a9c79da39a0782bf59c6cd2acb0b215ac976f466b9f6816da1f8e1c0640123"
+    },
+    {
+      "path": "research/src/openai.mjs",
+      "bytes": 11516,
+      "sha256": "1d967c369a0de1eead2179800f01f2de1c149c46d5b618c3705ee3fcd840cf65"
+    },
+    {
+      "path": "research/src/phone.mjs",
+      "bytes": 1305,
+      "sha256": "2d3ded02877cae610093d470b155475d6fc2d4eb69aa05a97d883fe639d41b10"
+    },
+    {
+      "path": "research/src/providers.mjs",
+      "bytes": 3773,
+      "sha256": "b7a16620e3c2e6f194dd31cf674dd124e07aae5661d0530d10b2439396054060"
+    },
+    {
+      "path": "research/tests/browser.cjs",
+      "bytes": 4744,
+      "sha256": "fbee2f31d8da233bfc42741550bed596867f2ecb074397712d7e4506bbf2ca7e"
+    },
+    {
+      "path": "research/tests/core.test.mjs",
+      "bytes": 8786,
+      "sha256": "0eed79039262473d6b25b41fb0eabb368f5ce7b091953b0ed131f7c526d8a1d3"
+    },
+    {
+      "path": "research/tests/mcp.test.mjs",
+      "bytes": 1014,
+      "sha256": "bf815c761a9a90b01ceec9eb5a030ff43b1781ce24170a7785f10bc55c81e956"
+    },
+    {
+      "path": "research/tests/openai.test.mjs",
+      "bytes": 12233,
+      "sha256": "32ea64fa71e0aafe708421aa284907ed10aeae84b517d0e1e8f553596eb4783e"
+    },
+    {
+      "path": "research/web/app.mjs",
+      "bytes": 7706,
+      "sha256": "c9634cc51aa1be09e5bc5189cc537f89b6ffa477898223423d0d0cecbc403371"
+    },
+    {
+      "path": "research/web/index.html",
+      "bytes": 10856,
+      "sha256": "a974ba86f9e281f96ef5478d4d648805e63d86c885630c0c8544ef65934e68dd"
+    },
+    {
+      "path": "research/web/style.css",
+      "bytes": 8765,
+      "sha256": "4ec6235183856aa3a17613e5895c5dc302d82cd6cfb1aeaf2fa548f7e1cfccb4"
+    }
+  ]
+}

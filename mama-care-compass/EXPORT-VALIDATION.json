@@ -1,0 +1,30 @@
+{
+  "source_commit": "278e445e78fe8c189200e958299dd66ab9edec51",
+  "tests": [
+    {
+      "label": "dependency-free medical logic smoke",
+      "command": "node --input-type=module -e \"import assert from 'node:assert/strict';import {emptyProfile,blankReport,reportCandidates,projectDiameter,screenPressure} from './lib/medical.ts';assert.equal(emptyProfile.age,'');assert.equal(emptyProfile.notes,'');assert.equal(blankReport().text,'');assert.equal(projectDiameter(10,1,5),15);assert.throws(()=>projectDiameter(-1,1,5));assert.deepEqual(reportCandidates('synthetic: 2 x 1 cm')[0].values,[20,10]);const x=screenPressure({lyingSys:'120',lyingDia:'80',oneSys:'95',oneDia:'70',threeSys:'',threeDia:'',symptom:'none'});assert.equal(x.threshold,true);assert.equal(x.incomplete,true);console.log('empty defaults, dimensions and pressure arithmetic passed');\"",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.15,
+      "summary_lines": [
+        "empty defaults, dimensions and pressure arithmetic passed"
+      ]
+    }
+  ],
+  "javascript_syntax": {
+    "checked": 8,
+    "failed": []
+  },
+  "local_html_reference_check": {
+    "missing": []
+  },
+  "export_scope_scan": {
+    "findings": [],
+    "limits": "Pattern/file inventory review is not exhaustive secret detection or production security certification."
+  },
+  "full_dependency_build": "not_run_no_dependency_install",
+  "browser_validation": "not_run_no_browser_dependency_install",
+  "live_model_or_production_requests": "not_run",
+  "readiness": "prepared_source_candidate"
+}
