@@ -1,0 +1,12 @@
+{
+  "name": "you-gong-ming",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "有共鸣：生活画像、相处提案与见面计划的交友产品原型",
+  "scripts": {
+    "dev": "python3 -m http.server 4173 --bind 127.0.0.1 --directory dist",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check dist/app.js && node --check dist/engine.mjs"
+  }
+}

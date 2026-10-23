@@ -1,0 +1,36 @@
+{
+  "source_commit": "d1981f18b2c27a896038219faaa55d77da92da3f",
+  "tests": [
+    {
+      "label": "engine tests",
+      "command": "node --test tests/*.test.mjs",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.23,
+      "summary_lines": []
+    },
+    {
+      "label": "syntax",
+      "command": "node --check dist/app.js && node --check dist/engine.mjs",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.16,
+      "summary_lines": []
+    }
+  ],
+  "javascript_syntax": {
+    "checked": 3,
+    "failed": []
+  },
+  "local_html_reference_check": {
+    "missing": []
+  },
+  "export_scope_scan": {
+    "findings": [],
+    "limits": "Pattern/file inventory review is not exhaustive secret detection or production security certification."
+  },
+  "full_dependency_build": "not_applicable_static_source",
+  "browser_validation": "not_run_no_browser_dependency_install",
+  "live_model_or_production_requests": "not_run",
+  "readiness": "prepared_source_candidate"
+}

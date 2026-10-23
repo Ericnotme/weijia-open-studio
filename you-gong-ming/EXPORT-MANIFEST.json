@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "site": "you-gong-ming",
+  "source_commit": "d1981f18b2c27a896038219faaa55d77da92da3f",
+  "license": "MIT for original code only; existing vendor/component terms preserved",
+  "readiness": "prepared_source_candidate",
+  "omitted_paths": [
+    ".openai/hosting.json",
+    "GROWTH_MEASUREMENT.md",
+    "dist/assets/riverside.jpg",
+    "dist/portfolio-growth.js",
+    "dist/robots.txt",
+    "dist/sitemap.xml"
+  ],
+  "export_changes": [
+    "Original-code-only MIT and scope notice added.",
+    "Deployment identity, runtime/cache artifacts and growth hooks excluded.",
+    "Original generated photograph omitted and replaced by new geometric SVG placeholder; docs/ASSETS.md records this export-only substitution."
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 266,
+      "sha256": "c63e85bf1a85400b1d3128b16d8a3f2c2731a1c3a993a449e795bf9d12d9e6ae"
+    },
+    {
+      "path": "EXPORT-VALIDATION.json",
+      "bytes": 994,
+      "sha256": "cc018894df5a0f560f073e3cb46b792bed97c63ce28f7ad572b0f605732eda8e"
+    },
+    {
+      "path": "EXPORT.md",
+      "bytes": 1609,
+      "sha256": "c0157f2485b1cee65c00c4b012b54dee46671bf2026c86c26c27a92bf3785c9c"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1147,
+      "sha256": "b87b597d867991704cb4365ef8d1a1959ecd562600400d8901b9379b662e07d7"
+    },
+    {
+      "path": "LICENSE-SCOPE.md",
+      "bytes": 913,
+      "sha256": "7038e5a4ab65a554272a032bc7f5fb296777bae283a9c07623804a160bae5c54"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3690,
+      "sha256": "6423aa7ba6c44cb73bb3dbbed2c006b403f3c79287ef2d99a3596c705dac4855"
+    },
+    {
+      "path": "dist/app.js",
+      "bytes": 21113,
+      "sha256": "958cc95a55eea3a06dc920c0466e6526e117053604822f46541f66d801bbc635"
+    },
+    {
+      "path": "dist/assets/riverside.svg",
+      "bytes": 311,
+      "sha256": "7736a5c25f4f9304987f3127904f6d00375e38dbd1516a80f9dde3750fceec66"
+    },
+    {
+      "path": "dist/engine.mjs",
+      "bytes": 10890,
+      "sha256": "9ef97777d80b5f9bac99917ac167c856e425906615c1860b7d6a526c14f6ca0e"
+    },
+    {
+      "path": "dist/favicon.svg",
+      "bytes": 313,
+      "sha256": "0231966340a80211b4ba813bfeeabd74e394d7158a19ddf1cc209f8f803cc5bc"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 6226,
+      "sha256": "30ba28ca84a7baba13ea90c8f8cf3dae0bbdd9707535728f7bdb4d61bbabddbd"
+    },
+    {
+      "path": "dist/styles.css",
+      "bytes": 16755,
+      "sha256": "5c41cef85054a1a413214f02b63b460bb570bc9a1f3c5cdc53ee8c5ab282a3d1"
+    },
+    {
+      "path": "docs/ASSETS.md",
+      "bytes": 501,
+      "sha256": "6c7eda30d3af591794d918080bd1530d31ddafcfad0205d56035080f3c164432"
+    },
+    {
+      "path": "docs/PRIVACY.md",
+      "bytes": 1177,
+      "sha256": "a134603e505ad95fe39249fdf5efab5bdbe3abd810a7a9a6cd95ae5b3f94ee57"
+    },
+    {
+      "path": "docs/PRODUCT.md",
+      "bytes": 4153,
+      "sha256": "9238132910b8afdfcbece5f4b6b49fed627a03aef138bf5457b5753d42e309b2"
+    },
+    {
+      "path": "docs/STORE-COPY.md",
+      "bytes": 2239,
+      "sha256": "50a04f9c2457de8ce4b998c5198d32e01de328d10cd4663460f2d0365b2ec773"
+    },
+    {
+      "path": "docs/VALIDATION.md",
+      "bytes": 967,
+      "sha256": "c3f8de42722ce56da9113ba765e97353f267302bbfd776feed8415c46cd73c98"
+    },
+    {
+      "path": "package.json",
+      "bytes": 399,
+      "sha256": "1c1cde063badbf7e043d845908dda81a1cdac735357f3d99fd4aea310302be7e"
+    },
+    {
+      "path": "tests/engine.test.mjs",
+      "bytes": 3267,
+      "sha256": "b959e34b1209ec6dbcf868593c7a2390e4a4757f7598c862f8c80fd395b7655b"
+    }
+  ]
+}

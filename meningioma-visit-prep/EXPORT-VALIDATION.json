@@ -1,0 +1,31 @@
+{
+  "source_commit": "481e911a814d8878811d28062436d415e182eb0a",
+  "tests": [
+    {
+      "label": "synthetic research tests",
+      "command": "cd research && PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v",
+      "status": "passed",
+      "exit_code": 0,
+      "summary_lines": [
+        "Ran 17 tests in 0.014s",
+        "OK"
+      ],
+      "invocation_note": "Initial invocation from the export root failed to import scaffold; rerun from the documented research working directory passed."
+    }
+  ],
+  "javascript_syntax": {
+    "checked": 2,
+    "failed": []
+  },
+  "local_html_reference_check": {
+    "missing": []
+  },
+  "export_scope_scan": {
+    "findings": [],
+    "limits": "Pattern/file inventory review is not exhaustive secret detection or production security certification."
+  },
+  "full_dependency_build": "not_applicable_static_source",
+  "browser_validation": "not_run_no_browser_dependency_install",
+  "live_model_or_production_requests": "not_run",
+  "readiness": "prepared_source_candidate"
+}

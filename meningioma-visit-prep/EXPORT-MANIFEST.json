@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "site": "meningioma-visit-prep",
+  "source_commit": "481e911a814d8878811d28062436d415e182eb0a",
+  "license": "MIT for original code only; existing vendor/component terms preserved",
+  "readiness": "prepared_source_candidate",
+  "omitted_paths": [
+    ".openai/hosting.json",
+    "tests/local-qa-result.json"
+  ],
+  "export_changes": [
+    "Original-code-only MIT and scope notice added.",
+    "Deployment identity, runtime/cache artifacts and growth hooks excluded.",
+    "Downloadable scaffold ZIP rebuilt from reviewed synthetic-only source with original-code license/scope included; old QA-result JSON excluded."
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 293,
+      "sha256": "2d6223a3eb2ef13b73d24fb0c15342b8c3805e88e770f113022e1d7588c33d78"
+    },
+    {
+      "path": "EXPORT-VALIDATION.json",
+      "bytes": 1034,
+      "sha256": "d9c4175b5c4c8bbd1b3a97c9f0cb69442ef4a1a3a75e51fe03f3a89eafc6e484"
+    },
+    {
+      "path": "EXPORT.md",
+      "bytes": 1473,
+      "sha256": "9c58126881ff2dfb3b94058651a6862c1c4a035e17ed28d49861438bf5c8a6e4"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1147,
+      "sha256": "b87b597d867991704cb4365ef8d1a1959ecd562600400d8901b9379b662e07d7"
+    },
+    {
+      "path": "LICENSE-SCOPE.md",
+      "bytes": 913,
+      "sha256": "7038e5a4ab65a554272a032bc7f5fb296777bae283a9c07623804a160bae5c54"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1763,
+      "sha256": "e932936e63b78b8d99604d804a57791ccae5fff6fea1b93b1ec6e7d5cdab6078"
+    },
+    {
+      "path": "dist/_headers",
+      "bytes": 299,
+      "sha256": "167f77c4d804b72c6c5c1b5ef9f0d64ee69a2252c5de0ada319950316d7b1f70"
+    },
+    {
+      "path": "dist/app.js",
+      "bytes": 8724,
+      "sha256": "5cffa195d83df3234b4f65f882f341217fbeaf49e1a37802fcfc6613f5c9768e"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 7986,
+      "sha256": "518aab0898919d5ca079ab2f115f2db2a9efc9216a10e7cb00a36ed0de7aab25"
+    },
+    {
+      "path": "dist/manifest.example.json",
+      "bytes": 8345,
+      "sha256": "f198dbfeff022431501e5a9c169c632a9384b3740992cd472520b76d6a4ea1fe"
+    },
+    {
+      "path": "dist/privacy.html",
+      "bytes": 4165,
+      "sha256": "42444c716ae3c8b86aa952f7289b72b314e400de7d200c6792503b3322d29b10"
+    },
+    {
+      "path": "dist/research-scaffold.zip",
+      "bytes": 10487,
+      "sha256": "285f8f298343205aa3cc252ba15ae63986daa8a8fca04e396b0152b69acd3544"
+    },
+    {
+      "path": "dist/research.html",
+      "bytes": 7342,
+      "sha256": "3b870bb407bf9416d86cc499e321aa13ce349cbfcbc4322ab20803ba81e79f3b"
+    },
+    {
+      "path": "dist/styles.css",
+      "bytes": 6990,
+      "sha256": "34364dda4e627dd5c29c9c0977f4b7defc29adec161ff2d51d3efab0b24d9e85"
+    },
+    {
+      "path": "research/README.md",
+      "bytes": 4455,
+      "sha256": "e59a6244600d925dd63d59a4334f78474df3884736d2abf530abb71c69754aed"
+    },
+    {
+      "path": "research/manifest.example.json",
+      "bytes": 8345,
+      "sha256": "f198dbfeff022431501e5a9c169c632a9384b3740992cd472520b76d6a4ea1fe"
+    },
+    {
+      "path": "research/scaffold.py",
+      "bytes": 10257,
+      "sha256": "5cbb5c1b78202991374fb5584f5f47f20e9d2fbf7f76df10bbe3053cc78311aa"
+    },
+    {
+      "path": "research/tests/test_scaffold.py",
+      "bytes": 4061,
+      "sha256": "9d35fb5ff7bc081326faeac1d1a439b8c13ab226e3b16a3a9028b62045fedf9b"
+    },
+    {
+      "path": "tests/qa.cjs",
+      "bytes": 9236,
+      "sha256": "7c0537f2b1c5cc98457046c5b6cbd4f06774531b2aae435cc2d99a6aba858f36"
+    },
+    {
+      "path": "tests/serve.py",
+      "bytes": 337,
+      "sha256": "c6e91e17457a17554f90ce190e14f1e61976021e32a6d74399705e8a1b8bac9f"
+    }
+  ]
+}

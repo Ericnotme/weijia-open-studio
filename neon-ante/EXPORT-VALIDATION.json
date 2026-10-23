@@ -1,0 +1,6 @@
+{
+  "automated_test_suite": "not provided in recovered package; syntax checks only",
+  "node_syntax_check": "all exported JS/MJS/CJS files passed",
+  "static_asset_links": "local HTML asset references resolve",
+  "browser_visual_QA": "not run"
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f9faf8">
+  <meta name="description" content="12 条有来源的跨领域线索。打开就能读，沿着连接继续探索。">
+  <meta property="og:title" content="偶然 · Serendipity">
+  <meta property="og:description" content="先遇见，再追问。12 条精选连接，每一条都附解释与原始来源。">
+  <title>偶然 · 先遇见，再追问</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23152f2b'/%3E%3Cpath d='M18 46V32c0-8 6-14 14-14h14M34 9l12 9-12 10' fill='none' stroke='%23d4f078' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="偶然首页"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 26V16a10 10 0 0 1 10-10h9M19 1l7 5-7 6"/></svg><span>偶然<span class="brand-en">SERENDIPITY</span></span></a>
+    <nav aria-label="主导航"><button class="text-button" id="browse-all">所有线索<span class="nav-count">12</span></button><button class="text-button" id="about-open">关于偶然</button></nav>
+  </header>
+
+  <main id="main">
+    <div class="intro-strip" id="intro-strip">
+      <h1>先遇见，<span>再追问。</span></h1>
+      <p>12 条精选连接。每次带走一个新想法。</p>
+    </div>
+
+    <section class="discovery" id="discovery" aria-labelledby="discovery-title">
+      <div class="section-line"><h2 id="discovery-title">从这一条开始</h2><span>AN UNEXPECTED CONNECTION</span></div>
+      <div id="featured-card"></div>
+      <div class="discovery-controls">
+        <p id="discovery-progress" role="status">本轮遇见 1 / 12 条</p>
+        <div><button class="text-button" id="refresh-feature">换一个发现 ↗</button><button class="lucky-button" id="lucky"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h3c5 0 7 12 12 12h3M17 14l4 4-4 4M3 18h3c2 0 3-2 4-4M14 10c1-2 2-4 4-4h3M17 2l4 4-4 4"/></svg><span id="lucky-label">手气不错</span></button></div>
+      </div>
+    </section>
+
+    <section class="results-section" id="results-section" aria-labelledby="results-title">
+      <div class="results-heading"><div><span class="eyebrow" id="results-kicker">THE COLLECTION / 12 CONNECTIONS</span><h2 id="results-title" tabindex="-1">挑一个你没想过的问题。</h2></div><button class="text-button" id="back-home" hidden>回到发现 ↗</button></div>
+      <form class="search-form" id="search-form" role="search">
+        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+        <label class="sr-only" for="search-input">搜索本站 12 条精选线索</label>
+        <input id="search-input" name="q" type="search" placeholder="在这 12 条线索中搜索" autocomplete="off" maxlength="120" enterkeyhint="search">
+        <kbd class="key-hint" aria-hidden="true">/</kbd>
+        <button class="submit-button" type="submit" aria-label="搜索本站线索"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button>
+      </form>
+      <div class="search-suggestions" aria-label="按话题探索"><button data-search="">全部 12 条</button><button data-search="AI">AI</button><button data-search="比特币">比特币</button><button data-search="大脑">大脑</button><button data-search="城市">城市</button><button data-search="音乐">音乐</button><button data-search="进化">进化</button></div>
+      <p class="result-count" id="result-count" role="status"></p>
+      <div id="results-list" class="results-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>好奇心，允许绕路。</span><span class="footer-note">精选研究 · 原始来源 · 保留疑问</span><button class="text-button" id="colophon-open">MADE OF CONNECTIONS <span aria-hidden="true">↗</span></button></footer>
+  <dialog id="detail-dialog" aria-labelledby="detail-title"><div class="dialog-top"><a class="mini-brand" href="/">偶然 / FIELD NOTES</a><button class="close-button" id="detail-close" aria-label="关闭线索">×</button></div><div id="detail-content"></div></dialog>
+  <dialog id="about-dialog" aria-labelledby="about-title"><div class="dialog-top"><span class="mini-brand">偶然 / ABOUT</span><button class="close-button" id="about-close" aria-label="关闭关于偶然">×</button></div><div class="about-content"><span class="eyebrow">FOLLOW A CONNECTION</span><h2 id="about-title">好奇心，<br>不必先有关键词。</h2><p>偶然是一组精选的跨领域阅读线索。每条先给你一个意外的发现，再解释它为什么成立、哪里不能过度推论，以及原始研究在哪里。</p><p>目前收录 12 条。你可以直接阅读、按话题筛选，或沿着关联继续探索。搜索只覆盖本站内容。本轮看过的线索会被记住，直到页面重新载入；浏览完一轮后可以重新开始。</p><div class="about-signoff">带走一个想法，就不算白来。</div><p class="about-fine">独立设计实验。入口与交互受 Google、Wikipedia 和 Apple 启发，与上述品牌无隶属或合作关系。</p></div></dialog>
+  <noscript><p class="noscript-note">请启用 JavaScript 使用搜索与随机发现。你也可以阅读 <a href="https://research.google/pubs/the-anatomy-of-a-large-scale-hypertextual-web-search-engine/" target="_blank" rel="noopener noreferrer">Google 的原始论文</a>。</p></noscript>
+<aside data-portfolio-nav style="font:12px/1.7 system-ui;text-align:center;padding:12px;background:#f6f8f8;color:#49636b"><a href="https://signal-observatory.weijiaxian.chatgpt.site/lab/index.html?utm_source=lab" style="color:inherit">鲜唯佳的作品实验室 · 探索更多工具</a><span style="display:inline-flex;flex-wrap:wrap;justify-content:center;gap:0 1rem;margin:0 .75rem"><a data-portfolio-support href="https://signal-observatory.weijiaxian.chatgpt.site/lab/support/" target="_blank" rel="noopener noreferrer" style="color:inherit;display:inline-flex;align-items:center;min-height:44px;font-size:.875rem;line-height:1.7;text-underline-offset:.2em">自愿支持创作</a><a data-portfolio-music href="https://signal-observatory.weijiaxian.chatgpt.site/lab/?listen=serendipity-search#music" target="_blank" rel="noopener noreferrer" style="color:inherit;display:inline-flex;align-items:center;min-height:44px;font-size:.875rem;line-height:1.7;text-underline-offset:.2em">配乐</a></span></aside></body>
+</html>

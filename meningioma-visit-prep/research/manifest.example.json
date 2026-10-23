@@ -1,0 +1,345 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "task": "men_rt_t1c",
+  "studies": [
+    {
+      "patient_id": "SYN-P00",
+      "study_id": "SYN-S00-0",
+      "center_id": "SYN-C0",
+      "authorization": "synthetic_no_patient_data",
+      "label_source": "synthetic",
+      "deidentified": true,
+      "sequences": {
+        "t1c": {
+          "uri": "synthetic://SYN-S00-0/t1c",
+          "sha256": "c35fafbcab9b4731982802b4435d07d5b5f1b570f2f29b18f564f829caf075aa",
+          "shape": [
+            2,
+            2,
+            2
+          ],
+          "spacing_mm": [
+            1,
+            1,
+            1
+          ],
+          "orientation": "RAS",
+          "grid_id": "SYN-S00-0"
+        }
+      }
+    },
+    {
+      "patient_id": "SYN-P00",
+      "study_id": "SYN-S00-1",
+      "center_id": "SYN-C0",
+      "authorization": "synthetic_no_patient_data",
+      "label_source": "synthetic",
+      "deidentified": true,
+      "sequences": {
+        "t1c": {
+          "uri": "synthetic://SYN-S00-1/t1c",
+          "sha256": "b5cd10a97fdfc1ecce4a92b814cecc3e7b582ab87e39fe7498fe57f5672b1cc9",
+          "shape": [
+            2,
+            2,
+            2
+          ],
+          "spacing_mm": [
+            1,
+            1,
+            1
+          ],
+          "orientation": "RAS",
+          "grid_id": "SYN-S00-1"
+        }
+      }
+    },
+    {
+      "patient_id": "SYN-P01",
+      "study_id": "SYN-S01-0",
+      "center_id": "SYN-C1",
+      "authorization": "synthetic_no_patient_data",
+      "label_source": "synthetic",
+      "deidentified": true,
+      "sequences": {
+        "t1c": {
+          "uri": "synthetic://SYN-S01-0/t1c",
+          "sha256": "52e403ddb03d6bbf99221e4724da6b8a797dc16e7bfcb6391fb87ab3cf50b216",
+          "shape": [
+            2,
+            2,
+            2
+          ],
+          "spacing_mm": [
+            1,
+            1,
+            1
+          ],
+          "orientation": "RAS",
+          "grid_id": "SYN-S01-0"
+        }
+      }
+    },
+    {
+      "patient_id": "SYN-P02",
+      "study_id": "SYN-S02-0",
+      "center_id": "SYN-C2",
+      "authorization": "synthetic_no_patient_data",
+      "label_source": "synthetic",
+      "deidentified": true,
+      "sequences": {
+        "t1c": {
+          "uri": "synthetic://SYN-S02-0/t1c",
+          "sha256": "64873d8a821fb3dadedcb811680e707c6baea7cdf37b5e0d6345ece132cc2c43",
+          "shape": [
+            2,
+            2,
+            2
+          ],
+          "spacing_mm": [
+            1,
+            1,
+            1
+          ],
+          "orientation": "RAS",
+          "grid_id": "SYN-S02-0"
+        }
+      }
+    },
+    {
+      "patient_id": "SYN-P03",
+      "study_id": "SYN-S03-0",
+      "center_id": "SYN-C0",
+      "authorization": "synthetic_no_patient_data",
+      "label_source": "synthetic",
+      "deidentified": true,
+      "sequences": {
+        "t1c": {
+          "uri": "synthetic://SYN-S03-0/t1c",
+          "sha256": "a9036e01cd7eb12df08cfcb324c3eb1e2e92e3c6033168def015894448d37d1d",
+          "shape": [
+            2,
+            2,
+            2
+          ],
+          "spacing_mm": [
+            1,
+            1,
+            1
+          ],
+          "orientation": "RAS",
+          "grid_id": "SYN-S03-0"
+        }
+      }
+    },
+    {
+      "patient_id": "SYN-P04",
+      "study_id": "SYN-S04-0",
+      "center_id": "SYN-C1",
+      "authorization": "synthetic_no_patient_data",
+      "label_source": "synthetic",
+      "deidentified": true,
+      "sequences": {
+        "t1c": {
+          "uri": "synthetic://SYN-S04-0/t1c",
+          "sha256": "08fe62122dc340fc4e95325709dfc9b65f2b181a8590684ebb214a83fad87ceb",
+          "shape": [
+            2,
+            2,
+            2
+          ],
+          "spacing_mm": [
+            1,
+            1,
+            1
+          ],
+          "orientation": "RAS",
+          "grid_id": "SYN-S04-0"
+        }
+      }
+    },
+    {
+      "patient_id": "SYN-P05",
+      "study_id": "SYN-S05-0",
+      "center_id": "SYN-C2",
+      "authorization": "synthetic_no_patient_data",
+      "label_source": "synthetic",
+      "deidentified": true,
+      "sequences": {
+        "t1c": {
+          "uri": "synthetic://SYN-S05-0/t1c",
+          "sha256": "fda30b822464f62d8bfc417ae063d6194d2f08919c056d936c25b6b7ff4a6972",
+          "shape": [
+            2,
+            2,
+            2
+          ],
+          "spacing_mm": [
+            1,
+            1,
+            1
+          ],
+          "orientation": "RAS",
+          "grid_id": "SYN-S05-0"
+        }
+      }
+    },
+    {
+      "patient_id": "SYN-P06",
+      "study_id": "SYN-S06-0",
+      "center_id": "SYN-C0",
+      "authorization": "synthetic_no_patient_data",
+      "label_source": "synthetic",
+      "deidentified": true,
+      "sequences": {
+        "t1c": {
+          "uri": "synthetic://SYN-S06-0/t1c",
+          "sha256": "762b2d5910ec9f8511b87d2aaad993841d11d18a8bf56a8212549ab4ea526164",
+          "shape": [
+            2,
+            2,
+            2
+          ],
+          "spacing_mm": [
+            1,
+            1,
+            1
+          ],
+          "orientation": "RAS",
+          "grid_id": "SYN-S06-0"
+        }
+      }
+    },
+    {
+      "patient_id": "SYN-P07",
+      "study_id": "SYN-S07-0",
+      "center_id": "SYN-C1",
+      "authorization": "synthetic_no_patient_data",
+      "label_source": "synthetic",
+      "deidentified": true,
+      "sequences": {
+        "t1c": {
+          "uri": "synthetic://SYN-S07-0/t1c",
+          "sha256": "a3536cdb251a8d0bb69b7594b1c5178bd820ece5c0646296ef694d3ee4b7be19",
+          "shape": [
+            2,
+            2,
+            2
+          ],
+          "spacing_mm": [
+            1,
+            1,
+            1
+          ],
+          "orientation": "RAS",
+          "grid_id": "SYN-S07-0"
+        }
+      }
+    },
+    {
+      "patient_id": "SYN-P08",
+      "study_id": "SYN-S08-0",
+      "center_id": "SYN-C2",
+      "authorization": "synthetic_no_patient_data",
+      "label_source": "synthetic",
+      "deidentified": true,
+      "sequences": {
+        "t1c": {
+          "uri": "synthetic://SYN-S08-0/t1c",
+          "sha256": "f3c172578083e56ec933b93c43734b87740016340611dbcfcea0b86564d52f2d",
+          "shape": [
+            2,
+            2,
+            2
+          ],
+          "spacing_mm": [
+            1,
+            1,
+            1
+          ],
+          "orientation": "RAS",
+          "grid_id": "SYN-S08-0"
+        }
+      }
+    },
+    {
+      "patient_id": "SYN-P09",
+      "study_id": "SYN-S09-0",
+      "center_id": "SYN-C0",
+      "authorization": "synthetic_no_patient_data",
+      "label_source": "synthetic",
+      "deidentified": true,
+      "sequences": {
+        "t1c": {
+          "uri": "synthetic://SYN-S09-0/t1c",
+          "sha256": "9736469fec8635cebaa72c11c2bb94ec2ce1f8b2e915e8b007d2d73405189b78",
+          "shape": [
+            2,
+            2,
+            2
+          ],
+          "spacing_mm": [
+            1,
+            1,
+            1
+          ],
+          "orientation": "RAS",
+          "grid_id": "SYN-S09-0"
+        }
+      }
+    },
+    {
+      "patient_id": "SYN-P10",
+      "study_id": "SYN-S10-0",
+      "center_id": "SYN-C1",
+      "authorization": "synthetic_no_patient_data",
+      "label_source": "synthetic",
+      "deidentified": true,
+      "sequences": {
+        "t1c": {
+          "uri": "synthetic://SYN-S10-0/t1c",
+          "sha256": "ba095732f1e4ea07353c9dabc63799795c8c40b72c67945d54e9edae40a2d0b7",
+          "shape": [
+            2,
+            2,
+            2
+          ],
+          "spacing_mm": [
+            1,
+            1,
+            1
+          ],
+          "orientation": "RAS",
+          "grid_id": "SYN-S10-0"
+        }
+      }
+    },
+    {
+      "patient_id": "SYN-P11",
+      "study_id": "SYN-S11-0",
+      "center_id": "SYN-C2",
+      "authorization": "synthetic_no_patient_data",
+      "label_source": "synthetic",
+      "deidentified": true,
+      "sequences": {
+        "t1c": {
+          "uri": "synthetic://SYN-S11-0/t1c",
+          "sha256": "3654e72c900616f4fbde020152dccf0059872c1884b2db0930b0ad57045430bb",
+          "shape": [
+            2,
+            2,
+            2
+          ],
+          "spacing_mm": [
+            1,
+            1,
+            1
+          ],
+          "orientation": "RAS",
+          "grid_id": "SYN-S11-0"
+        }
+      }
+    }
+  ]
+}

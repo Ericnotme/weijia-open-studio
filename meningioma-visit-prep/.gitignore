@@ -1,0 +1,20 @@
+node_modules/
+.env*
+.sites-runtime/
+__pycache__/
+research/output/
+qa-output/
+*.tar.gz
+
+# Clean source export: never commit deployment identity or private runtime data.
+.openai/
+.sites-runtime/
+.wrangler/
+node_modules/
+.env*
+!.env.example
+*.tsbuildinfo
+__pycache__/
+qa-output/
+runtime/
+output/
