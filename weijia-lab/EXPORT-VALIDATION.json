@@ -1,0 +1,17 @@
+{
+  "source_commit": "05d4d5563b4d2fd1eaf97a421f98bf78df29d9af",
+  "javascript_syntax": {
+    "checked": 1,
+    "failed": []
+  },
+  "local_html_assets": {
+    "missing": []
+  },
+  "scope_scan_findings": [],
+  "browser_visual_QA": "not_run",
+  "full_dependency_build": "not_run_no_dependency_install",
+  "tests": {
+    "html_interaction_structure": "passed; gallery/dialog and 3 mini examples preserved",
+    "runtime_browser": "not_run"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "bc7306786ff414753135e3aa8558d442bc374239c7c1d0808348c1b198d4a6e4"
+    },
+    {
+      "path": "EXPORT-VALIDATION.json",
+      "sha256": "334d52974a146b0ee1547a90c5644a54f683eba7a822d34c1a91dfa2f4d8ce35"
+    },
+    {
+      "path": "EXPORT.md",
+      "sha256": "9cf15fccc1e94440405510c058016e8fc2c0cf5ec6f4f27280721b539020d920"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "2b41a062f80c69363aa5f9d93b2be825a19907597c13f5e96fabb28211df572f"
+    },
+    {
+      "path": "LICENSE-SCOPE.md",
+      "sha256": "c122784c8d37907c549a8bee97cd68d343ceae9b6a8f33f69b65311bbbc3292c"
+    },
+    {
+      "path": "README.md",
+      "sha256": "6e881d2ac72f1f77290b19fe4907e6b1fd27df2cdcfc56dffb50920b3ceb6d04"
+    },
+    {
+      "path": "dist/app.js",
+      "sha256": "0daa33e6bbaf6ea7023da9b9565e6177fe39a1d0e1ef63e3ef4856671d77483e"
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "a0b0b2183cf572a468ae518e25a9f3e38671f646aa05f831343c912fa74691b0"
+    },
+    {
+      "path": "dist/placeholder.svg",
+      "sha256": "087c0fab00b2a84977c5b9720142685f0279ccb968199b8c118a1ea20fd36e3a"
+    },
+    {
+      "path": "dist/style.css",
+      "sha256": "7e82983168f3987e1cfeb5f1bf411b9b7596464adb8fa1bffb94832275da1d8c"
+    }
+  ]
+}

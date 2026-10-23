@@ -1,0 +1,30 @@
+{
+  "source_commit": "59ef1a0822b4ab06d545a59cfb39ff5fd528b78b",
+  "tests": [
+    {
+      "label": "conversion boundaries",
+      "command": "node --input-type=module -e \"import assert from 'node:assert/strict';import {convert} from './dist/model.mjs';const x={baseline:5,effect:0.8,low:0.7,high:0.9,type:'HR'};const r=convert(x);assert(r.lower<r.result&&r.result<r.upper&&r.result<5);assert.equal(convert({...x,type:'RR'}).result,4);assert.equal(convert({...x,type:'RATE'}).result,4);for(const patch of [{type:'OR'},{baseline:-1},{low:2},{baseline:100},{effect:NaN}])assert.throws(()=>convert({...x,...patch}));console.log('conversion arithmetic and invalid-input checks passed');\"",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.09,
+      "summary_lines": [
+        "conversion arithmetic and invalid-input checks passed"
+      ]
+    }
+  ],
+  "javascript_syntax": {
+    "checked": 3,
+    "failed": []
+  },
+  "local_html_reference_check": {
+    "missing": []
+  },
+  "export_scope_scan": {
+    "findings": [],
+    "limits": "Pattern/file inventory review is not exhaustive secret detection or production security certification."
+  },
+  "full_dependency_build": "not_applicable_static_source",
+  "browser_validation": "not_run_no_browser_dependency_install",
+  "live_model_or_production_requests": "not_run",
+  "readiness": "prepared_source_candidate"
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "site": "jinniu-health-scenarios",
+  "source_commit": "f5747f2a734581c007ee7df1fe658366c0cbe2b5",
+  "license": "MIT for original code only; existing vendor/component terms preserved",
+  "readiness": "prepared_source_candidate",
+  "omitted_paths": [
+    ".openai/hosting.json",
+    "GROWTH_MEASUREMENT.md",
+    "dist/jinniu.json",
+    "dist/portfolio-growth.js",
+    "dist/robots.txt",
+    "dist/sitemap.xml"
+  ],
+  "export_changes": [
+    "Original-code-only MIT and scope notice added.",
+    "Deployment identity, runtime/cache artifacts and growth hooks excluded.",
+    "Unverified DataV boundary file omitted; map explicitly disabled with on-page notice, no failing fetch. Core scenario calculation remains available. MAP_DATA_URL is an opt-in configuration point for appropriately licensed local data."
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 233,
+      "sha256": "e7c08b118db4138f853ef2c0c617133171fedb0592db981b7cf1648832a6dba7"
+    },
+    {
+      "path": "EXPORT-VALIDATION.json",
+      "bytes": 1526,
+      "sha256": "edab1c7c0443f0f6a2dde8f41435b76a56c2e4f118029d0254def5ce192cda81"
+    },
+    {
+      "path": "EXPORT.md",
+      "bytes": 1727,
+      "sha256": "828badd777cb55f59ae6171860e58a77f9130850fc5e2af6fcafa137d6d86a1a"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1147,
+      "sha256": "b87b597d867991704cb4365ef8d1a1959ecd562600400d8901b9379b662e07d7"
+    },
+    {
+      "path": "LICENSE-SCOPE.md",
+      "bytes": 913,
+      "sha256": "7038e5a4ab65a554272a032bc7f5fb296777bae283a9c07623804a160bae5c54"
+    },
+    {
+      "path": "README.md",
+      "bytes": 439,
+      "sha256": "5a2a23345a5cae6b0f01723e39c6155b78142d43bb5e11b1f4c9b3c6cd1cba9c"
+    },
+    {
+      "path": "dist/app.js",
+      "bytes": 17156,
+      "sha256": "081e65f72d0fd8528062c107ebcd7c5aa43c7656e25b2e6d6140d814df5c9216"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 15679,
+      "sha256": "63e9396bcd00b2caca30555b45105e27ce8208edc56ff3d5955315b099a0d666"
+    },
+    {
+      "path": "dist/model.js",
+      "bytes": 2260,
+      "sha256": "2f9e37e45613ecc9d06f6cf30344b03e5b7d763e6585163faa4029510d51a1e5"
+    },
+    {
+      "path": "dist/style.css",
+      "bytes": 26690,
+      "sha256": "34272cb6b37144966b1ca6cfad79817039f33098397fbae1c524d9fd531924a4"
+    }
+  ]
+}

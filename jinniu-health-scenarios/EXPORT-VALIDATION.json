@@ -1,0 +1,30 @@
+{
+  "source_commit": "f5747f2a734581c007ee7df1fe658366c0cbe2b5",
+  "tests": [
+    {
+      "label": "simulator invariants",
+      "command": "node --input-type=module -e \"import assert from 'node:assert/strict'; import {simulate,environmentFactors} from './dist/model.js'; for(const age of [18,40,65,80])for(const sex of ['male','female'])for(const scenario of ['baseline','improve','pressure']){const rows=simulate({age,sex,scenario}); assert.equal(rows.length,31); for(let i=0;i<rows.length;i++){const r=rows[i];assert(Math.abs(r.total+r.survival-1)<1e-10);assert(Math.abs(r.cumulative.reduce((a,b)=>a+b,0)-r.total)<1e-10);assert(r.total>=0&&r.total<=1);if(i)assert(r.total>=rows[i-1].total);}}assert.deepEqual(environmentFactors(),[1,1,1,1,1,1]);console.log('48 scenario runs passed conservation and monotonicity checks');\"",
+      "status": "passed",
+      "exit_code": 0,
+      "seconds": 0.09,
+      "summary_lines": [
+        "48 scenario runs passed conservation and monotonicity checks"
+      ]
+    }
+  ],
+  "javascript_syntax": {
+    "checked": 2,
+    "failed": []
+  },
+  "local_html_reference_check": {
+    "missing": []
+  },
+  "export_scope_scan": {
+    "findings": [],
+    "limits": "Pattern/file inventory review is not exhaustive secret detection or production security certification."
+  },
+  "full_dependency_build": "not_applicable_static_source",
+  "browser_validation": "not_run_no_browser_dependency_install",
+  "live_model_or_production_requests": "not_run",
+  "readiness": "prepared_source_candidate"
+}

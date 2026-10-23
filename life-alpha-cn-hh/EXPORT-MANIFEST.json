@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "site": "life-alpha-cn-hh",
+  "source_commit": "59ef1a0822b4ab06d545a59cfb39ff5fd528b78b",
+  "license": "MIT for original code only; existing vendor/component terms preserved",
+  "readiness": "prepared_source_candidate",
+  "omitted_paths": [
+    ".openai/hosting.json",
+    "dist/icon-192.png",
+    "dist/icon-512.png"
+  ],
+  "export_changes": [
+    "Original-code-only MIT and scope notice added.",
+    "Deployment identity, runtime/cache artifacts and growth hooks excluded.",
+    "Raster install icons replaced with a simple new SVG; app model unchanged."
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 207,
+      "sha256": "3224188f4a79c624b6b2f1bc159da5afb41d091637b9d5a03099ae76e7bec73e"
+    },
+    {
+      "path": "EXPORT-VALIDATION.json",
+      "bytes": 1376,
+      "sha256": "fd22796eba37fdfe4b8cd774aeeba7a66f5cd735765d1b17ece588c4d53a9ed4"
+    },
+    {
+      "path": "EXPORT.md",
+      "bytes": 1753,
+      "sha256": "91c487d314cc087e65f4349a835bc341488f42feb5d18efa143596b5568a050d"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1147,
+      "sha256": "b87b597d867991704cb4365ef8d1a1959ecd562600400d8901b9379b662e07d7"
+    },
+    {
+      "path": "LICENSE-SCOPE.md",
+      "bytes": 913,
+      "sha256": "7038e5a4ab65a554272a032bc7f5fb296777bae283a9c07623804a160bae5c54"
+    },
+    {
+      "path": "README.md",
+      "bytes": 353,
+      "sha256": "69cb4e23de37ea2a50d8c278cca542e1fbf648a0fb92850f9181e3ac31d545a3"
+    },
+    {
+      "path": "dist/app.mjs",
+      "bytes": 19109,
+      "sha256": "f32c039f391dc4ac76a8f8ed80489f5af1d9ec3db0905976018b171214e5eea5"
+    },
+    {
+      "path": "dist/evidence.mjs",
+      "bytes": 21595,
+      "sha256": "55f4843eccb1c402b42ce88abe7fd3393024a55b531b79f50c7ae33d7584bb8e"
+    },
+    {
+      "path": "dist/icon.svg",
+      "bytes": 228,
+      "sha256": "c4946b7cc1fa6c50c2a975f6c29d5b1b46a6898f089bcd8ddf27a7fb06912df1"
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 4500,
+      "sha256": "70d7d12c1949175a0363f94a19f9cbd8b6ce0171eda13647749add9b9e01bca2"
+    },
+    {
+      "path": "dist/manifest.webmanifest",
+      "bytes": 356,
+      "sha256": "28e9e9992f0d3ce5a746be307a822756e78765ed1627425c55af087dcb48e4c7"
+    },
+    {
+      "path": "dist/model.mjs",
+      "bytes": 2844,
+      "sha256": "edba48961ec696f0a0e0b27bd5b0fdf8813bfb8e5b191e0b1e0c460ad8dcb12b"
+    },
+    {
+      "path": "dist/style.css",
+      "bytes": 8874,
+      "sha256": "05c43316bb45fb65ec57ff127a54bbe1b4dd4566b3a9ae93e4a60e0209f1b180"
+    }
+  ]
+}
