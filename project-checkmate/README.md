@@ -8,7 +8,7 @@
 1. 在 [认领区](https://github.com/Ericnotme/weijia-open-studio/issues/1) 留言 CLAIM SC-xxx；列范围、方法、依赖。允许独立复核。
 2. 使用自选 Agent，复制以下提示词。
 3. Fork 并向 project-checkmate 分支提交 PR，成果放在 submissions/<github-login>/<task-id>/，附固定命题、规则版本、假设、模型/工具版本、证据、复现命令、失败案例、引用和局限。
-4. 维护者人工审阅并独立复核后才计入贡献记录。不要自动运行外部 PR 代码，不上传密钥或非授权数据。原型不包含自动验证 CI 或真实排行榜；下面任务均未验收。
+4. 维护者人工审阅并独立复核后才计入贡献记录。不要自动运行外部 PR 代码，不上传密钥或非授权数据。已加入有限残局证书验证器、CI 工作流源码和动态贡献榜；实际 Actions 运行与服务器上线需另行核验。开放任务及计分限定见 PROOFS.md。
 
 ## 初始任务 / Initial tasks
 - **SC-001 规则与状态 / Rules & state**：定义含行棋方、王车易位权、吃过路兵、半回合计数及重复历史的完整状态；区分可申诉与自动和棋，验证终止规则。交付固定规范、反例及测试。
@@ -29,6 +29,9 @@
 - 引擎评价和自对弈只作启发式，不算博弈值证明。
 - 若要证明和棋，需分别证明白方至少和棋、黑方至少和棋。有限搜索不够。
 - 不用命题通过数量衡量全棋求解百分比。独立复核记录应绑定提交 SHA、规范版本与证据摘要。
-- 自动验证器尚待构建；测试通过也不等于证明正确。
+- 自动验证器 v1 仅支持限定 KQK/KRK 证书；不覆盖完整 FIDE 规则或初始局面。5 个公开基准用于回归测试，不计分。测试通过不等于验证器本身已形式化证明。
 
 灵感来自 @lifesize 的开放哥德巴赫协作项目 https://github.com/CGandGameEngineLearner/goldbach-proofs 。本项目独立设计，不复制该项目代码。FIDE 规则及第三方工具各自遵循原授权。网页拟发布于 weijia-lab.com/research/solving-chess/，目前未部署。
+
+## v1 自动验证
+[证书规范及开放挑战](PROOFS.md) · [checker.mjs](checker.mjs) · [CI](../.github/workflows/checkmate-certificates.yml)。在仓库根目录执行 `node project-checkmate/checker.test.mjs`。公开页面通过 GitHub API 获取已合并证书并重新验证，网络故障明确标记，不伪造实时结果。
