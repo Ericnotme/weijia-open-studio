@@ -1,0 +1,37 @@
+name: CHECKMATE certificate gate
+on:
+  pull_request_target:
+    branches: [project-checkmate]
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'project-checkmate/submissions/**/SC-005/*.json'
+  push:
+    branches: [project-checkmate]
+    paths:
+      - 'project-checkmate/**'
+      - '.github/workflows/checkmate-certificates.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout trusted base only
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.base.sha || github.sha }}
+          persist-credentials: false
+      - name: Regression checks
+        run: node project-checkmate/checker.test.mjs
+      - name: Verify certificate from Git objects without checking out PR
+        if: github.event_name == 'pull_request_target'
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: node project-checkmate/ci.mjs pr
+      - name: Audit accepted branch
+        if: github.event_name == 'push'
+        run: node project-checkmate/ci.mjs audit
