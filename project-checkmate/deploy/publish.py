@@ -9,6 +9,7 @@ STATE=Path("/var/lib/weijia-checkmate")
 LOCK=Path("/root/weijia-lab-publish.lock")
 SOURCE=Path(__file__).resolve().parent.parent
 BASE="/research/solving-chess"
+ROUTE_VERSION="2"
 FILES={"index.html":"text/html","checker.mjs":"application/javascript","leaderboard.mjs":"application/javascript"}
 LEX=re.compile(r"""\s+|\#[^\n]*|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|[;{}]|(?:\\.|[^\s;{}\#"'\\])+""")
 def require(ok,msg):
@@ -62,14 +63,17 @@ def routes(release):
     for filename,mime in FILES.items():
         uri=BASE+"/" if filename=="index.html" else BASE+"/"+filename
         ext=filename.rsplit(".",1)[1]
-        lines+=["location = "+uri+" {","    alias "+str(release/filename)+";","    types { "+mime+" "+ext+"; } default_type "+mime+"; charset utf-8;","    expires -1;","    add_header X-Content-Type-Options nosniff always;",
+        # A directory URI with a file alias lets nginx's index module append
+        # index.html again. Resolve the HTML explicitly inside this location.
+        mapping=["    root "+str(release)+";","    try_files /index.html =404;"] if filename=="index.html" else ["    alias "+str(release/filename)+";"]
+        lines+=["location = "+uri+" {"]+mapping+["    types { "+mime+" "+ext+"; } default_type "+mime+"; charset utf-8;","    expires -1;","    add_header X-Content-Type-Options nosniff always;",
           "    add_header Content-Security-Policy \"default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'unsafe-inline'; connect-src https://api.github.com; img-src 'self' data:; base-uri 'none'; form-action 'none'; frame-ancestors 'none'\" always;","}"]
     return "\n".join(lines+["# END WEIJIA CHECKMATE"])
 def baseline():return {uri:origin(uri) for uri in ["/","/rt5/board/","/rt5/api/status"]}
 def unchanged(before):return all(origin(uri)==data for uri,data in before.items())
 def publish(dry):
     original=CONF.read_bytes();text=original.decode();require(BASE not in text and "# BEGIN WEIJIA CHECKMATE" not in text,"existing CHECKMATE route; refuse overwrite")
-    before=baseline();files=payload();revision=digest(b"".join(name.encode()+b"\0"+hashlib.sha256(body).digest() for name,body in sorted(files.items())))
+    before=baseline();files=payload();revision=digest(b"CHECKMATE routes v"+ROUTE_VERSION.encode()+b"\0"+b"".join(name.encode()+b"\0"+hashlib.sha256(body).digest() for name,body in sorted(files.items())))
     release=ROOT/revision;candidate=splice(text,routes(release)).encode()
     if dry:
         print("Read-only preflight passed. Would publish",revision,"to",BASE+"/");return
@@ -83,7 +87,7 @@ def publish(dry):
     journal=STATE/(revision+".json");backup=STATE/(revision+".conf")
     require(not journal.exists() and not backup.exists(),"existing journal; inspect before retry")
     backup.write_bytes(original);backup.chmod(0o600)
-    journal.write_text(json.dumps({"original":digest(original),"candidate":digest(candidate),"revision":revision}));journal.chmod(0o600)
+    journal.write_text(json.dumps({"original":digest(original),"candidate":digest(candidate),"revision":revision,"route_version":ROUTE_VERSION}));journal.chmod(0o600)
     require(CONF.read_bytes()==original,"configuration changed during preparation")
     try:
         switch(candidate)

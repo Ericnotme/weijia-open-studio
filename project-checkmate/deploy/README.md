@@ -1,6 +1,10 @@
 # Existing ECS deployment: operator runbook
 
-This is an isolated static release to the existing weijia-lab.com nginx vhost, not a new Netlify site and not a homepage replacement. The script is not a remote execution facility. It has not yet been executed on production. Review the public source and verify the chosen commit before running.
+This is an isolated static release to the existing weijia-lab.com nginx vhost, not a new Netlify site and not a homepage replacement. The script is not a remote execution facility. Review the public source and verify the chosen commit before running.
+
+On 2026-11-25 the first production attempt failed its HTML readback and automatically restored the prior nginx configuration. The nginx error log showed that a file `alias` for the trailing-slash HTML URI caused the index module to look for `index.htmlindex.html`. Route version 2 uses `root <release>; try_files /index.html =404;` for the exact HTML location and retains file aliases for the JavaScript modules. `ROUTE_VERSION` is included in the release digest, so this retry has a new release and journal identity even with identical asset bytes. Preserve the failed attempt's journal and configuration backup; never delete or overwrite them to force a retry.
+
+Local mocked tests cover deployment control flow, locking, response checks and rollback, but do not exercise nginx's URI mapping or TLS behavior. Those tests did not detect the first attempt's alias problem. `preflight` performs read-only baseline and parser checks; it does not execute `nginx -t`. Before publishing route version 2, test the generated locations using real nginx on an isolated loopback-only temporary port, verify the returned HTML and JavaScript bytes and MIME types, then run the production preflight under the shared lock. The corrected version is not considered deployed until actual origin and independent public checks pass.
 
 In the **existing authenticated ECS Workbench terminal**, from a private staging directory:
 
