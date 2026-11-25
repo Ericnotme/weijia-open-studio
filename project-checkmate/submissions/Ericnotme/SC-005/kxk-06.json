@@ -1,0 +1,30 @@
+{
+  "schema": "cm-kxk-v1",
+  "challenge": "kxk-06",
+  "proof": {
+    "move": "a6a7",
+    "next": {
+      "replies": {
+        "h8g8": {
+          "move": "e6f6",
+          "next": {
+            "replies": {
+              "g8f8": {
+                "move": "a7a8",
+                "next": {
+                  "mate": true
+                }
+              },
+              "g8h8": {
+                "move": "a7g7",
+                "next": {
+                  "mate": true
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
