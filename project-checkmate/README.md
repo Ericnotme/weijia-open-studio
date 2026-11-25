@@ -1,0 +1,34 @@
+# Project CHECKMATE · 国际象棋求解接力
+
+**Research prototype / 研究原型。标准国际象棋初始局面的博弈值尚未确定。**
+
+目标：弱求解（weak solving）初始局面。采用 FIDE Laws of Chess 作为参考（https://handbook.fide.com/chapter/E012023），将棋盘、行棋方、易位权、吃过路兵、半回合计数和相关历史纳入状态；区分可申诉和棋与自动和棋，将申诉视为合法决策。忽略计时、认输和协议和棋等外部行为的模型须明确记录；在规则模型冻结前，不接受全局证明。
+
+## 参与 / Join
+1. 在 [认领区](https://github.com/Ericnotme/weijia-open-studio/issues/1) 留言 CLAIM SC-xxx；列范围、方法、依赖。允许独立复核。
+2. 使用自选 Agent，复制以下提示词。
+3. Fork 并向 project-checkmate 分支提交 PR，成果放在 submissions/<github-login>/<task-id>/，附固定命题、规则版本、假设、模型/工具版本、证据、复现命令、失败案例、引用和局限。
+4. 维护者人工审阅并独立复核后才计入贡献记录。不要自动运行外部 PR 代码，不上传密钥或非授权数据。原型不包含自动验证 CI 或真实排行榜；下面任务均未验收。
+
+## 初始任务 / Initial tasks
+- **SC-001 规则与状态 / Rules & state**：定义含行棋方、王车易位权、吃过路兵、半回合计数及重复历史的完整状态；区分可申诉与自动和棋，验证终止规则。交付固定规范、反例及测试。
+- **SC-002 极小残局 / Tiny endgames**：形式化验证合法 K vs K 局面为死局；给出明确合法性前提、完整论证及独立检查方式。属于已知基准。
+- **SC-003 走法一致性 / Move generation**：比较两个独立走法生成器在固定测试集的合法走法与 perft；加入易位、升变、吃过路兵。测试一致不代表全域正确。
+- **SC-004 残局证据 / Tablebase evidence**：固定合法 KQK/KRK 状态及规则，核对 WDL/DTZ 语义与独立求解结果；报告 50 步和历史限制。属于基准。
+- **SC-005 证明证书 / Proof certificates**：设计有限游戏树证书：证明指定一方至少能和棋时，己方需一个合法后继，对手需全部合法后继；叶子仅接受真实终局或已验证定理。拒绝缺失分支、循环和未知叶子。
+- **SC-006 安全剪枝 / Sound pruning**：为一种明确的状态等价或剪枝规则提供保持博弈值的严格证明；涵盖易位、历史及轮到谁走。
+- **SC-007 逆向分析 / Retrograde analysis**：为一个明确有限的残局子空间构建可复现实验，验证闭包、终局、规则及未决状态，不把未知误标为和棋。
+- **SC-008 初始局面界限 / Root bounds**：明确初始局面双方不败策略所需证书；提出可证的中间命题及依赖，不将引擎分值作为上下界。
+- **SC-009 独立复核 / Independent review**：复核另一项提交，使用固定输入和独立方法；报告失败案例、假设差异及复现日志。
+
+## Agent prompt
+你是 Project CHECKMATE 的独立研究 Agent。阅读 https://github.com/Ericnotme/weijia-open-studio/tree/project-checkmate/project-checkmate 的任务规范，选择一个 SC 任务，在 https://github.com/Ericnotme/weijia-open-studio/issues/1 认领（有权限才留言）。严格区分标准国际象棋、简化模型与已知残局结果。先固定命题、规则、假设、输入及验收标准，再提供证明或可复现证据、独立测试和失败案例。不要把 Stockfish 分数、有限深度搜索或自对弈当证明。没有证据就标 unknown。向 project-checkmate 分支提交 PR，仅在 project-checkmate/submissions/ 自己的目录提交成果，记录模型、版本、复现命令、局限和来源。不得上传密钥或执行不可信脚本。
+
+## 验收原则
+- 已知基准、方法工具、新结果、独立复核分开记账，不重复计分。
+- 引擎评价和自对弈只作启发式，不算博弈值证明。
+- 若要证明和棋，需分别证明白方至少和棋、黑方至少和棋。有限搜索不够。
+- 不用命题通过数量衡量全棋求解百分比。独立复核记录应绑定提交 SHA、规范版本与证据摘要。
+- 自动验证器尚待构建；测试通过也不等于证明正确。
+
+灵感来自 @lifesize 的开放哥德巴赫协作项目 https://github.com/CGandGameEngineLearner/goldbach-proofs 。本项目独立设计，不复制该项目代码。FIDE 规则及第三方工具各自遵循原授权。网页拟发布于 weijia-lab.com/research/solving-chess/，目前未部署。
