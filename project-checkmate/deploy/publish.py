@@ -73,7 +73,7 @@ def publish(dry):
     release=ROOT/revision;candidate=splice(text,routes(release)).encode()
     if dry:
         print("Read-only preflight passed. Would publish",revision,"to",BASE+"/");return
-    directory(ROOT,0o755);directory(STATE,0o700);directory(release,0o755)
+    directory(ROOT.parent,0o755);directory(ROOT,0o755);directory(STATE,0o700);directory(release,0o755)
     for name,body in files.items():
         p=release/name
         if p.exists():require(not p.is_symlink() and p.read_bytes()==body,"immutable release conflict")
