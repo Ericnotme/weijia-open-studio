@@ -23,31 +23,57 @@ const registry=[
     "id": "kxk-01",
     "fen": "7k/8/5KQ1/8/8/8/8/8 w - - 0 1",
     "max": 1,
-    "description": "White KQK / 白方后王对王"
+    "description": "White KQK / 白方后王对王",
+    "reference": true
   },
   {
     "id": "kxk-02",
     "fen": "7k/R7/6K1/8/8/8/8/8 w - - 0 1",
     "max": 1,
-    "description": "White KRK / 白方车王对王"
+    "description": "White KRK / 白方车王对王",
+    "reference": true
   },
   {
     "id": "kxk-03",
     "fen": "7k/Q3K3/8/8/8/8/8/8 w - - 0 1",
     "max": 3,
-    "description": "White KQK / 白方后王对王"
+    "description": "White KQK / 白方后王对王",
+    "reference": true
   },
   {
     "id": "kxk-04",
     "fen": "7k/4K3/8/R7/8/8/8/8 w - - 0 1",
     "max": 3,
-    "description": "White KRK / 白方车王对王"
+    "description": "White KRK / 白方车王对王",
+    "reference": true
   },
   {
     "id": "kxk-05",
     "fen": "1q6/8/8/8/1k6/8/8/K7 b - - 0 1",
     "max": 3,
-    "description": "Black KQK / 黑方后王对王"
+    "description": "Black KQK / 黑方后王对王",
+    "reference": true
+  },
+  {
+    "id": "kxk-06",
+    "fen": "7k/8/Q3K3/8/8/8/8/8 w - - 0 1",
+    "max": 5,
+    "description": "White KQK / 白方后王对王",
+    "reference": false
+  },
+  {
+    "id": "kxk-07",
+    "fen": "7k/R7/4K3/8/8/8/8/8 w - - 0 1",
+    "max": 5,
+    "description": "White KRK / 白方车王对王",
+    "reference": false
+  },
+  {
+    "id": "kxk-08",
+    "fen": "8/7q/8/8/1k6/8/8/K7 b - - 0 1",
+    "max": 5,
+    "description": "Black KQK / 黑方后王对王",
+    "reference": false
   }
 ];
 const lib=checkerLibrary(registry);
