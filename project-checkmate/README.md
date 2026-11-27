@@ -1,5 +1,7 @@
 # Project CHECKMATE · 1000 个 AI 寻找非穷举证明
 
+[残局论文 v1.2、中文版与交互棋盘](endgame-paper/README.md)
+
 **Research prototype / 研究原型。标准国际象棋初始局面的博弈值尚未确定。**
 
 ## 研究使命 / Mission

@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="亲自走三个国际象棋残局，看看忽略象的位置会怎样改变黑王的防守。附中英文研究草稿。"><title>黑王能吃这只兵吗？ · 唯佳 Lab</title><link rel="stylesheet" href="style.css"><script defer src="examples.js"></script><script defer src="demo.js"></script></head><body>
+<header><a href="/research/solving-chess/">唯佳 Lab <span>／ Project CHECKMATE</span></a><a href="#paper">读论文 ↓</a></header>
+<main><div class="intro"><p class="kicker">国际象棋残局研究　／　v1.2</p><h1>黑王能吃这只兵吗？</h1><p>一枚远处的象，就可能改变答案。你执黑，点选黑王旁的格子，试着守和。</p></div>
+<nav id="tabs" aria-label="选择示例"></nav>
+<section class="game" aria-label="交互棋盘"><div class="boardframe"><div id="ranks"></div><div id="board" aria-label="棋盘，白方在下"></div><div id="files">abcdefgh</div></div>
+<div class="side"><div id="step" class="kicker"></div><h2 id="title"></h2><p id="prompt"></p>
+<div class="toggles"><label><input id="hide" type="checkbox"> 隐去白象</label><label><input id="legal" type="checkbox"> 标出合法落点</label></div>
+<p id="projection"></p><div id="response" role="status" aria-live="polite"></div>
+<div class="controls"><button id="reply">走出白方应着 →</button><button id="undo" class="minor">撤回</button><button id="reset" class="minor">重摆</button></div>
+<details id="explain"><summary>看本题解析与表库结果</summary><p id="why"></p><p id="value"></p><p id="allmoves"></p></details></div></section>
+<section class="paper" id="paper"><p class="kicker">论文与数据</p><h2>用颜色选择性抽象复用国际象棋残局的不败证书</h2><p>黑王走向浅格时，深格象无论站在哪里都攻击不到它。这让一份防守证明可以用于很多棋盘。7,933 个抽象状态覆盖了 239,007 个局部摆法。把黑王的选择放宽到深格，有时连胜负都会判断错。</p>
+<div class="links"><a href="paper-zh.html">在线读中文本</a><a href="paper-zh.pdf">中文 PDF ↓</a><a href="paper-en.pdf">English PDF ↓</a><a href="supplement-en.pdf">英文补充材料 ↓</a><a href="https://github.com/Ericnotme/weijia-open-studio/tree/project-checkmate/project-checkmate/endgame-paper">GitHub 文件 ↗</a></div>
+<p class="note">鲜唯佳 Weijia Xian（暂定署名）· AI 协作研究草稿 · 未经同行评审。演示使用真实合法走法与本地 Syzygy 的零半回合钟胜和负结果。每例可走三个回合，白方采用一个保持其最佳表库结果的应着。局部状态检查不证明从标准开局可达。</p></section></main>
+<noscript>交互棋盘需要启用 JavaScript。<a href="paper-zh.html">阅读中文版论文</a></noscript></body></html>

@@ -1,0 +1,48 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>用颜色选择性抽象复用国际象棋残局的不败证书｜中文本</title><style>*{box-sizing:border-box}body{margin:auto;max-width:790px;padding:32px 24px;color:#172a28;background:#fffefa;font:16px/1.85 "Songti SC","Noto Serif CJK SC",serif}article{overflow-wrap:break-word}a{color:#136451}h1{font-size:2.25em;line-height:1.35}h2{margin-top:1.3em;font-size:1.55em;border-bottom:1px solid #98afa6}h3{font-size:1.16em}section{margin:3em 0}.meta,.by,nav{font:14px/1.7 system-ui,sans-serif}.by{color:#49625b}table{border-collapse:collapse;font: .86em/1.6 system-ui,sans-serif;width:100%}caption{text-align:left}td,th{border-bottom:1px solid #aaa;text-align:right;padding:5px}td:first-child,th:first-child{text-align:left}li{margin-bottom:7px}nav{display:flex;gap:20px;flex-wrap:wrap}@page{size:A4;margin:19mm 17mm}@media print{nav{display:none}body{background:white;font-size:10.5pt;padding:0;max-width:none;line-height:1.68}section{margin:0}section+section{break-before:page}p{margin:.62em 0}h2{margin:.5em 0}h3{margin:.7em 0 .2em}h1,h2,h3,caption{break-after:avoid}table{break-inside:avoid}a{color:inherit;text-decoration:none}}</style><nav><a href="./">← 返回交互棋盘</a><a href="paper-zh.pdf">下载中文 PDF</a><a href="paper-en.pdf">English PDF</a></nav><article>
+<section><div class="meta">PROJECT CHECKMATE　／　研究论文 v1.2　／　中文本</div>
+<h1>用颜色选择性抽象复用<br>国际象棋残局的不败证书</h1>
+<div class="by">鲜唯佳 Weijia Xian · 独立研究者（暂定署名）<br>2026 年 11 月 27 日 · 研究草稿，未经同行评审</div>
+<h2>摘要</h2>
+<p>把棋子的位置从棋盘记录里删去之后，一份防守证明还能用于哪些局面？我们研究经典的错色象边兵残局。抽象保留双王、白方 a 线兵与行棋方，删去全部白方深格象的坐标。通过扩大白方可选走法、限制黑方可选走法，7,933 个抽象状态得到证书，覆盖 239,007 个有零或一枚象的局部摆法。我们用同一组局面比较具体吸引子 V3、固定走廊 V4 和颜色抽象 V5。Syzygy 全域普查找到 371,081 个通过棋库状态检查的和棋局面，三个模型分别覆盖 94.61%、53.51% 和 64.34%，误报均为零。</p>
+<p>Lean 4 将固定的有限证书接到独立定义的抽象转移规则和有界策略树定理。把该定理用于完整棋规，仍须证明走法对应、终局和角落防守等前提。允许黑王任意走进深格的实验产生了两类反例：有的局面依然和棋，但选中的走法违法；另一些局面连“不败”判断本身也错了。本文量化了复用防守证据所付出的覆盖代价。局部摆法的历史可达性和标准开局的博弈值均未解决。</p>
+<h2>1　问题与先行研究</h2>
+<p>白方有王、一个在 a2 至 a7 的兵和若干深格象，黑方只有王。兵的升变格 a8 是浅格。卡帕布兰卡在《国际象棋基础》第 14 节例 30 中展示了错色象与边兵的守角主题。这里还需证明一个包含四格的防守区域，并说明在此区域之外怎样安全抵达它。</p>
+<p>抽象解释、交替精化和三值博弈抽象已经建立了这里所用的保守推理原则。给对手更多选择会漏证一些防守；给防守者一着只对某些具体摆法合法的棋，则可能产生错误证明。未获证状态记为未知。本文使用固定投影，无须假定抽象求解器已找出所有真实和棋。Kristensen 研究过用有序二叉决策图表示残局表，Gomboc 等人比较过整张残局表的无损压缩。本文存储一个充分的不败区域及其策略，任务与完整表库不同。Hurd 的无兵残局库和 Marić 等人的王车对王策略也已有形式化验证。V2、V3、V4 是本项目此前的研究工件。</p></section>
+<section><h2>2　局面、棋规与防守区域</h2>
+<p>将 a1 至 h8 编号为 0 至 63。具体局面为 (w, p, k, B, t)，其中 w 是白王，p 是白兵，k 是黑王，B 是互异的深格白象位置集合，t 为行棋方。投影 α(w,p,k,B,t) = (w,p,k,t)。棋子必须占不同格，双王不相邻；白方走时黑王不得已受攻击，黑方走时则允许正在被将军。抽象局面删去象后执行对应检查。每个允许的抽象局面至少有一个零象代表。</p>
+<p>FIDE 的合法局面还要求存在合法历史。我们只讨论与摆法相容且尚在进行的对局，排除比赛钟、超时、弃权、认输和协议和棋。本材料没有易位或吃过路兵。已因死局等原因结束的对局立即停止。三次重复和五十回合规则的可申请和棋，以及五次重复和七十五回合规则的自动和棋，均可安全结束防守。应按规则优先判定将死；不能仅凭没有后继就认定和棋。</p>
+<h3>引理 1　兵消失后，任意数量的同色象对单王都是死局</h3>
+<p>黑王不能合法地将军白王。黑王在浅格时，深格象不能将军。黑王在深格时至少有两个正交相邻的浅格。不与黑王相邻的白王至多控制其中一格，因为同时控制两个这样的邻格会使双王相邻。因此至少有一个浅格既空又不受攻击，黑王不能被将死。之后的吃子保持材料条件，也没有兵可升变，故任何合法续着均不能产生将死。几何程序另核对了黑王在深格时的 1,806 个非相邻双王有序摆法。</p>
+<h3>引理 2　角落区域可守</h3>
+<p>设 Z = {a7, b7, a8, b8}。在 Z 内轮到黑方且黑王不在 a8 时，黑王可回到 a8：深格象和 a 线兵都不能攻击它；a8 的三个邻格两两相邻，白王若占据或控制 a8 就会邻接当前黑王。即使黑方正被将军，这步也可解将。白兵刚升变时，若棋局仍在进行，黑王可吃掉升变子，进入引理 1 的死局；有的弱升变已经直接结束棋局。</p>
+<p>黑王在 a8 时不受将军，每个合法王步仍在 Z 内。有时可吃象或兵；完全无着则逼和。白方普通着不会移走黑王；升变由上面的情况处理。这一策略避免将死。兵步和吃子总数有限，此后自动回合数规则终止对局。于是对每段相容历史，黑方均有不败续着。</p></section>
+<section><h2>3　抽象走法与提升定理</h2>
+<p>Z 内的允许状态作为第零层。在区域外，白方可以待步一次，仅交换行棋方。这覆盖真实象步，即使本来没有可走的象，也保留这个额外选择。白王和兵可以忽略白象的阻挡，但仍遵守双王距离等保留条件。a2 的双步仍需中间格及终点没有保留棋子。真实国际象棋中没有这种待步。</p>
+<p>白兵升变时，如果黑王邻接 a8 且白王不控制 a8，就进入安全出口 SAFE；否则进入 UNKNOWN。四种升变都被覆盖。安全出口指升变已经造成死局，或合法立即吃回可留下死局。抽象中的多余白方升变只会增加防守义务。黑方在 Z 外仅选择相邻、避开白王和兵攻击的浅格。没有深格象能占据或攻击该目标，因此同一选择在每个具体代表上都合法。黑王吃兵也进入安全出口。</p>
+<p>同步迭代时，黑方只需存在一条通向已获证状态或安全出口的边；白方则要求每条边都满足该条件。白方的一条未知出口足以阻止认证。新加入状态的层号为秩；需要的非目标边都必须严格降秩。</p>
+<h3>条件提升定理及证明</h3>
+<p>设投影保持行棋方，抽象目标有可信的具体不败续着。每个已获证状态的具体代表要么已可安全停止，要么仍有合法后继。防守方在尚未停止的具体代表上能够实现所选抽象边；对手每条真实边均由抽象边覆盖。若非目标处的防守方有一个获证且降秩的选择，而对手的每个后继都获证且降秩，则每个具体代表都有一棵有限策略树到达可信续着。</p>
+<p>对自然数秩作强归纳。目标处直接结束。黑方实现所选边后使用归纳假设；白方借助进展条件排除未分类的死端，再对每个合法选择使用归纳假设。单调性允许用共同深度上界容纳较短分支。无限严格降秩不可能。</p>
+<h3>机器检查到哪里</h3>
+<p>Lean 4.20.0 的通用提升定理显式要求对手节点有进展。棋盘层证明了任意数量深格象的浅格性质、回 a8、单王逃格和结构性升变吃回。历史层描述重复键列表、半回合计数、终局停止及将死优先；从给定起点出发的可达性依赖传入的棋规。历史提升要求将死无合法后继、安全叶排除将死。这样黑方只需保证选中的防守分支；不要求黑方可能犯的败着也安全。</p>
+<p>另一个检查器核对 49,152 个有限数据槽，64 组内核计算给出 7,933 个获证状态和严格降秩条件。独立程序将全部槽与 JSON 对照并拒绝八种篡改。新语义桥在不读取秩或策略的情况下定义允许的抽象走法，再由布尔检查推出白方的全称降秩义务、黑方合法降秩选择和进展。固定数据消去了“证书正确”的假设。最终定理对每个获证状态给出最多九次抽象转移到 Z 或 SAFE 的策略树。安全升变之后的具体吃回不计入此界。</p>
+<p>73 个模块实际编译，171 个打印声明均无公理依赖。具体棋局推论仍依赖行棋方对应、目标可靠、局面进展、黑方着法可实现及白方着法覆盖。完整走法生成、角落持续防守以及可申请和棋的历史连接仍待形式化。</p></section>
+<section><h2>4　同一批局面上的比较</h2>
+<p>独立重建的 Python 求解器找到 41,619 个抽象局部状态，其中 7,933 个获证，最大秩为 9。另一个使用 python-chess 的检查器枚举所有零象或一象的 1,224,059 个局部局面。V5 获证 239,007 个，检查了 1,220,580 个白方合法着，其中 634,917 个象步。6,928 次升变里有 110 次直接形成死局，另 6,818 次可合法立即吃回。黑方 159,181 个非终局有策略，另有 217 个逼和。</p>
+<table><caption>表 1　覆盖和证书大小。覆盖率分母为 371,081 个通过状态检查的表库和棋。</caption><tr><th>方法</th><th>局部获证</th><th>状态有效</th><th>覆盖率</th><th>见证字节数</th></tr><tr><td>V3 具体吸引子</td><td>351,349</td><td>351,074</td><td>94.61%</td><td>2,810,792</td></tr><tr><td>V4 固定走廊</td><td>198,799</td><td>198,553</td><td>53.51%</td><td>39,719</td></tr><tr><td>V5 颜色抽象</td><td>239,007</td><td>238,761</td><td>64.34%</td><td>63,464</td></tr></table>
+<p>逐局核对得到严格包含 V4 ⊂ V5 ⊂ V3，差值分别为 40,208 和 112,342。新版和归档版 V3 在所有槽上的秩一致。V4 有 6,584 个完整走廊模板，长度按黑方着数计算。V5 的 7,933 个模板则记录秩与动作。独立检查器分别核对吸引子的着法、降秩和 V4 的完整路径几何条件。</p>
+<p>把 V3 改为仅用角落作种子，获证数降至 350,795；再限制黑王只走浅格降至 243,107；此时再允许白方待步，数字不变；最后完整投影得到 239,007。各步分别少 554、107,688、0、4,100。反过来，在仅用角落种子时单独加入待步会少 82。最后的 4,100 同时涉及坐标合并、共用黑方策略与忽略阻挡。对五种具体吸引子，独立穷举所有未获证状态，验证在各自规则下都无法再加入一层。这个完整性仅针对相应吸引子。</p>
+<p>V5 每条索引、秩与动作记录占 8 字节。相同见证全部具体展开需 1,912,056 字节，约为投影的 30.13 倍。V4 完整变长路径只需 39,719 字节，展开为 1,200,788；若固定填充五个目标格，则为 65,840 和 1,987,990。所有模型若只存成员位图，一律是 202,752 字节。以上均不含棋规、种子证明、格式或检查器。计时使用同一台 arm64 macOS 机器、同一优化 C++ 实现，每个模型在独立进程运行三轮。V3/V4/V5 耗时中位数为 1.452/0.103/0.033 秒，峰值内存中位数为 115.2/6.7/9.1 MiB。覆盖和工作量不同，独立棋库检查及 Lean 编译另计。</p>
+<h3>多象计数</h3>
+<p>每个投影可用的空深格数记为 b。白方走时，沿黑王对角线删除遇到第一枚保留棋子之前的所有格。若这些格上有象，离黑王最近的一枚就会将军，别的象不能掩盖这种违法。可放 m 枚互不可区分象的摆法因此恰为组合数 C(b,m)。显式二象枚举从 3,585,678 个候选中接受 3,295,029 个。零至八象合计 70,152,666,169 种局部摆法，计数本身不构造升变历史。</p></section>
+<section><h2>5　外部表库核验与反例</h2>
+<p>本地使用 20 个 Syzygy WDL/DTZ 文件，覆盖王兵对王、王象兵对王及升变、吃子后的材料，共 1,256,000 字节。所有采用的文件都匹配公开 MD5，另存 SHA-256。最初六个副本校验不符，已舍弃；替换副本与公开校验值一致。</p>
+<p>在半回合钟为零时，全域 1,224,059 次 WDL 探测成功。通过 python-chess 状态检查的 1,223,736 个局面中，371,081 个和棋，852,655 个黑负；没有仅由五十回合规则改变分类的结果。其余 323 个在更强的前驱将军一致性检查中被标为 IMPOSSIBLE_CHECK，279 个返回和棋，44 个返回黑负，均作为诊断单列。</p>
+<p>三个主模型与控制变体的获证并集共有 351,349 个，另行逐局查询 WDL 与 DTZ，全部返回零。其中 351,074 个通过状态检查，275 个属上述诊断。V5 自身的 239,007 个分为 238,761 与 246。WDL 表示胜、和、负；和棋的 DTZ 零由 WDL 导出。DTZ 表示到归零着的距离，可能舍入。此前公开接口核对 55 个 FEN，得到 53 个成功响应和两个预设的非法局面拒绝。22 个获证分层样本均和；王后对王的计数对照在半回合钟 0 与 99 时分别返回胜和规则相关胜，DTZ 同为 13。FEN 不包含完整重复历史。</p>
+<h3>去掉颜色限制会怎样</h3>
+<p>仍删去象的位置，却允许黑王选择深格，抽象获证数从 7,933 涨到 13,777，多出 5,844 个。其中专门挑出的 24 个“所选走法违法”样本里，表库判 16 和、8 黑负。样本的选法不能用于估计整批误报率。</p>
+<p><strong>走法错，局面仍和。</strong>白王 a1、白兵 a2、白象 e1，黑王 c2，黑方走。抽象选 c3，恰被 e1 象控制。黑王实际可走 d3 守和，表库 DTZ 为 0。</p>
+<p><strong>走法错，结论也错。</strong>白王 c2、白兵 a3、白象 e7，黑王 a2，黑方走。抽象把吃 a3 兵当作一步安全出口，e7 象却沿长斜线保护 a3。黑方唯一合法着是退 a1；表库判黑负，DTZ 为 −2。交互棋盘可逐格检验两例。</p>
+<h2>6　复现、局限与作者说明</h2>
+<p>固定版本含求解器、独立检查、反例、局面表、组合计数、Lean 代码及表库文件校验记录。26 步复现入口全数通过。供读者审阅的公开论文与交互棋盘单独分发。多象结果依靠组合与几何论证，表库全域普查只覆盖零至一象。对标准初始局面没有胜负结论。</p>
+<p>英文稿暂列鲜唯佳（Weijia Xian），Independent Researcher。研究方向、原模型说明和验收要求由发起者提供。OpenAI Codex 参与文献检索、论证及程序起草、实验、内部检查和论文编排，并协助制作本中文本。真实人类独立审阅、最终署名确认及发表层面的原创性判断仍待完成。本中文本按英文 v1.2 主文的研究内容编译，补充实验细节见随附英文补充材料。</p></section><section><h2>参考文献</h2><ol><li>Alur, Rajeev and Henzinger, Thomas A. and Kupferman, Orna and Vardi, Moshe Y.. <a href="https://www.cs.huji.ac.il/~ornak/publications/concur98.pdf">Alternating Refinement Relations</a>. 1998</li><li>de Alfaro, Luca and Roy, Pritam. <a href="https://luca.dealfaro.com/papers/10/3valued_iac.pdf">Solving Games via Three-Valued Abstraction Refinement</a>. 2010</li><li>de Alfaro, Luca and Godefroid, Patrice and Jagadeesan, Radha. <a href="https://luca.dealfaro.com/papers/04/lics04.pdf">Three-Valued Abstractions of Games: Uncertainty, but with Precision</a>. 2004</li><li>Cousot, Patrick and Cousot, Radhia. <a href="https://cs.nyu.edu/~pmc309/publications.www/CousotCousot-POPL-77-ACM-p238--252-1977.pdf">Abstract Interpretation: A Unified Lattice Model for Static Analysis of Programs by Construction or Approximation of Fixpoints</a>. 1977</li><li>Gomboc, Dave and Shelton, Christian R. and Miner, Andrew S. and Ciardo, Gianfranco. <a href="https://www.cs.ucr.edu/~cshelton/papers/docs/ecai24.pdf">Comparing Lossless Compression Methods for Chess Endgame Data</a>. 2024</li><li>Hurd, Joe. <a href="https://gilith.com/papers/chess.pdf">Formal Verification of Chess Endgame Databases</a>. 2005</li><li>Mari\&#x27;c. <a href="https://poincare.matf.bg.ac.rs/~janicic/papers/2015-cade-krk.pdf">Proving Correctness of a KRK Chess Endgame Strategy by Using Isabelle/HOL and Z3</a>. 2015</li><li>Kristensen, Jesper Torp. <a href="https://jespertk.dk/master_thesis/report/report.pdf">Generation and Compression of Endgame Tables in Chess with Fast Random Access Using OBDDs</a>. 2005</li><li>Capablanca, José Raúl. <a href="https://www.gutenberg.org/ebooks/33870">Chess Fundamentals</a>. 1921</li><li>de Man, Ronald. <a href="https://github.com/syzygy1/tb">Syzygy Endgame Tablebases</a>. </li><li>FIDE. <a href="https://handbook.fide.com/chapter/E012023">FIDE Laws of Chess Taking Effect from 1 January 2023</a>. 2023</li><li>Fiekas, Niklas. <a href="https://python-chess.readthedocs.io/en/latest/syzygy.html">python-chess: Syzygy Endgame Tablebase Probing</a>. </li></ol></section></article></html>
