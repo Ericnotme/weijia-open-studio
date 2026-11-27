@@ -34,7 +34,8 @@ function render(){
   b.textContent=shown?glyph[shown]+'\uFE0E':'';b.setAttribute('aria-label',sq+' '+(shown?names[shown]:'空格'));b.onclick=()=>choose(sq);el('board').appendChild(b);
  }
  el('step').textContent='第 '+(lesson+1)+' 题 ／ 共 3 题　·　'+(pending?(pending.end?'棋局结束':'白方应着'):node.end?'本例结束':'黑方走');
- el('title').textContent=ex.title;el('prompt').textContent=ex.question;el('why').textContent=ex.why;
+ el('title').textContent=ex.title;el('prompt').textContent=ex.question;el('why').textContent='本题起始局面：'+ex.why;
+ el('independent').href='https://lichess.org/analysis/standard/'+fen.replaceAll(' ','_');
  el('response').textContent=msg||node.end||'黑王已选中。点一个目标格试走。';
  el('projection').textContent=hide?'现在只遮住白象。它仍在真实棋盘上，仍会攻击目标格。':'';
  el('value').textContent='当前摆法的表库结果为'+verdict(pending?pending.result:node.result)+'。'+(!pending&&node.rank!=null?'V5 抽象证书秩为 '+node.rank+'。':'');
